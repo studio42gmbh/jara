@@ -1,2 +1,2 @@
-# jara
-Java Ray Tracer
+# JARA
+JARA is a educational 100% Java based ray tracer.

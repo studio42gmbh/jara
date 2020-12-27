@@ -1,0 +1,15 @@
+module:de.sft.jara
+de.s42.jara
+de.s42.jara.assets
+de.s42.jara.core
+de.s42.jara.core.spatial
+de.s42.jara.enitites
+de.s42.jara.enitites.lights
+de.s42.jara.enitites.primitives
+de.s42.jara.loaders.objloader
+de.s42.jara.loaders.objloader.parser
+de.s42.jara.materials
+de.s42.jara.prefabs
+de.s42.jara.scenes
+de.s42.jara.tracer
+de.s42.jara.util
