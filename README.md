@@ -4,6 +4,13 @@ JARA is a educational 100% Java based ray tracer.
 
 ## Examples
 
+
+![Example Car](https://studio42gmbh.github.io/jara/images/jara-meshtest-2020-07-27-14-45-46.jpg)
+Car loaded as OBJ exported from Blender
+
+![Example House](https://studio42gmbh.github.io/jara/images/jara-meshtest2-2020-07-26-15-28-20.jpg)
+House loaded as OBJ exported from Blender
+
 ![Example Chair](https://studio42gmbh.github.io/jara/images/jara-chairstill-2020-12-27-22-29-50.jpg)
 Chair loaded as OBJ exported from Blender
 
