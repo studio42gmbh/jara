@@ -2,6 +2,8 @@
 
 JARA is a educational 100% Java based ray tracer.
 
+If you like JARA or have constructive critique dont hesitate to write us directly on info@s42m.de. We are always happy for qualified feedback!
+
 ## Features
 
 * PBR Materials with Textures
@@ -17,6 +19,8 @@ JARA is a educational 100% Java based ray tracer.
 
 * Support for HDR backgrounds
 * Optimize spatial optimization
+* Add configurable denoising
+* Add configurable post FX
 * Allow dynamic settings and camera in app
 * Provide file based scenes either using default file format or little own format
 * Add tutorials
