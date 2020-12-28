@@ -62,7 +62,6 @@ public final class AssetManager
 	{
 		Studio1("backgrounds/studio1.jpg"),
 		Studio2("backgrounds/studio2.jpg"),
-		Studio3("backgrounds/studio3.jpg"),
 		SkyCloudy("backgrounds/sky-cloudy.jpg"),
 		Amsterdam("backgrounds/amsterdam.jpg"),
 		Path("backgrounds/path.png"),
