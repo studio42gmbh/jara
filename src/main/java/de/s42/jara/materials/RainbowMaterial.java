@@ -35,7 +35,7 @@ public class RainbowMaterial extends Material
 	public final double scale;
 	public final double amplitude;
 
-	public RainbowMaterial( Color emissive,  double metalness,  double roughness, double ior, double scale, double amplitude)
+	public RainbowMaterial(Color emissive, double metalness, double roughness, double ior, double scale, double amplitude)
 	{
 		super(emissive, Color.Black, metalness, roughness, ior);
 
@@ -44,7 +44,7 @@ public class RainbowMaterial extends Material
 	}
 
 	@Override
-	public Color computeEmissive( RayContext context)
+	public Color computeEmissive(RayContext context)
 	{
 		assert context != null;
 
@@ -52,7 +52,7 @@ public class RainbowMaterial extends Material
 	}
 
 	@Override
-	public Color computeAlbedo( RayContext context)
+	public Color computeAlbedo(RayContext context)
 	{
 		assert context != null;
 

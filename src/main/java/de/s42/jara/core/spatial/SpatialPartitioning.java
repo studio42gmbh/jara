@@ -109,7 +109,7 @@ public class SpatialPartitioning
 		}
 		median.divide(ent.size());
 
-		//@todo BS JARA find a smart point instead of median
+		//@todo JARA find a smart point instead of median
 		/*
 		for (PhysicalEntity entity : ent) {
 			//log.debug("ENT", entity.bounds.min.get(aIndex), entity.bounds.max.get(aIndex), entity);

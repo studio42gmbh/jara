@@ -38,7 +38,7 @@ import de.s42.jara.materials.Material;
 public class SphereSculpture implements SceneLoader
 {
 	@Override
-	public Scene loadScene( AssetManager assets)
+	public Scene loadScene(AssetManager assets)
 	{
 		assert assets != null;
 
@@ -55,7 +55,7 @@ public class SphereSculpture implements SceneLoader
 		);
 		scene.setDirectionalLight(studioLight1);
 
-		//@todo BS JARA stil have to add 2nd light to fully emulate workshop scene
+		//@todo JARA stil have to add 2nd light to fully emulate workshop scene
 		/*
 		DirectionalLight studioLight2 = new DirectionalLight(
 			new Vector3(1.0, 1.0, 0.0),

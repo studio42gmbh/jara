@@ -37,7 +37,7 @@ public abstract class PhysicalEntity extends Entity
 	public Material material;
 	public final BoundingBox bounds = new BoundingBox();
 
-	public PhysicalEntity( Vector3 position,  Material material)
+	public PhysicalEntity(Vector3 position, Material material)
 	{
 		super(position);
 
@@ -60,7 +60,7 @@ public abstract class PhysicalEntity extends Entity
 		return material;
 	}
 
-	public void setMaterial( Material material)
+	public void setMaterial(Material material)
 	{
 		assert material != null;
 

@@ -49,7 +49,7 @@ public class RoughnessMetalness implements SceneLoader
 	public final static double CAMERA_FOV = 45.0;
 
 	@Override
-	public Scene loadScene( AssetManager assets)
+	public Scene loadScene(AssetManager assets)
 	{
 		assert assets != null;
 

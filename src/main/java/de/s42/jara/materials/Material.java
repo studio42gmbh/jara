@@ -61,7 +61,7 @@ public class Material
 	public double clearCoat;
 	public double clearCoatRoughness;
 
-	public Material( Color emissive,  Color albedo,  double metalness,  double roughness, double ior)
+	public Material(Color emissive, Color albedo, double metalness, double roughness, double ior)
 	{
 		assert emissive != null;
 		assert albedo != null;
@@ -73,7 +73,7 @@ public class Material
 		this.ior = ior;
 	}
 
-	public Material( Material toCopy)
+	public Material(Material toCopy)
 	{
 		assert toCopy != null;
 
@@ -84,7 +84,7 @@ public class Material
 		ior = toCopy.ior;
 	}
 
-	public void copy( Material toCopy)
+	public void copy(Material toCopy)
 	{
 		assert toCopy != null;
 
@@ -165,7 +165,7 @@ public class Material
 		Color specular = new Color();
 		double specularWeight = 0.0;
 		Vector3 reflect = lastDirection.copy().reflect(normal);
-		//@todo BS JARA correct scaling of rough?
+		//@todo JARA correct scaling of rough?
 		double specularSpread = Math.pow(rough, 4.0);
 		for (int dc = 0; dc < SPECULAR_SUBSAMPLES[subsamples]; ++dc) {
 
@@ -199,7 +199,7 @@ public class Material
 		if (transparency > 0.0) {
 
 			Vector3 refract = lastDirection.copy().refract(normal, refractIor);
-			//@todo BS JARA correct scaling of rough?
+			//@todo JARA correct scaling of rough?
 			double refractionSpread = Math.pow(rough, 4.0);
 			for (int dc = 0; dc < REFRACTION_SUBSAMPLES[subsamples]; ++dc) {
 
@@ -236,7 +236,7 @@ public class Material
 		double clearCoatWeight = 0.0;
 		if (clearCoat > 0.0) {
 			Vector3 reflectClearCoat = lastDirection.copy().reflect(normal);
-			//@todo BS JARA correct scaling of rough?
+			//@todo JARA correct scaling of rough?
 			double clearCoatSpread = Math.pow(clearCoatRoughness, 4.0);
 			for (int dc = 0; dc < SPECULAR_SUBSAMPLES[subsamples]; ++dc) {
 
@@ -338,11 +338,10 @@ public class Material
 		//result.set(fresnel, fresnel, fresnel);		
 		//@debug normal in opengl colors
 		//result.set(normal.x * 0.5 + 0.5, normal.y * 0.5 + 0.5, normal.z * 0.5 + 0.5);
-		
 		context.color.copy(result);
 	}
 
-	protected double computeFresnel( double dotDirectionNormal,  double currentIor)
+	protected double computeFresnel(double dotDirectionNormal, double currentIor)
 	{
 		double cosi = dotDirectionNormal;
 		double etai = 1.0;
@@ -381,27 +380,27 @@ public class Material
 		return context.direction.copy();
 	}
 
-	public Color computeEmissive( RayContext context)
+	public Color computeEmissive(RayContext context)
 	{
 		return emissive;
 	}
 
-	public Color computeAlbedo( RayContext context)
+	public Color computeAlbedo(RayContext context)
 	{
 		return albedo;
 	}
 
-	public double computeMetalness( RayContext context)
+	public double computeMetalness(RayContext context)
 	{
 		return metalness;
 	}
 
-	public double computeRoughness( RayContext context)
+	public double computeRoughness(RayContext context)
 	{
 		return roughness;
 	}
 
-	public double computeIor( RayContext context)
+	public double computeIor(RayContext context)
 	{
 		return ior;
 	}

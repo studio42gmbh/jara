@@ -41,7 +41,7 @@ public class PbrMaterial extends Material
 
 	private final Vector3 textureScale;
 
-	public PbrMaterial( Texture albedo,  Texture roughness,  Texture metalness,  Texture normal,  Texture emissive, double ior,  Vector3 textureScale)
+	public PbrMaterial(Texture albedo, Texture roughness, Texture metalness, Texture normal, Texture emissive, double ior, Vector3 textureScale)
 	{
 		super(Color.Black, Color.Black, 0.0, 0.0, ior);
 
@@ -54,7 +54,7 @@ public class PbrMaterial extends Material
 	}
 
 	@Override
-	public Color computeAlbedo( RayContext context)
+	public Color computeAlbedo(RayContext context)
 	{
 		assert context != null;
 
@@ -66,7 +66,7 @@ public class PbrMaterial extends Material
 	}
 
 	@Override
-	public Color computeEmissive( RayContext context)
+	public Color computeEmissive(RayContext context)
 	{
 		assert context != null;
 
@@ -78,7 +78,7 @@ public class PbrMaterial extends Material
 	}
 
 	@Override
-	public double computeRoughness( RayContext context)
+	public double computeRoughness(RayContext context)
 	{
 		assert context != null;
 
@@ -90,7 +90,7 @@ public class PbrMaterial extends Material
 	}
 
 	@Override
-	public double computeMetalness( RayContext context)
+	public double computeMetalness(RayContext context)
 	{
 		assert context != null;
 
@@ -110,7 +110,7 @@ public class PbrMaterial extends Material
 			return context.direction.copy();
 		}
 
-		Vector3 textureNormal = /*new Vector3(0,0,1);//*/normalTexture.retrieveVector3(new Vector3(), context.texturePosition.copy().multiply(this.textureScale));
+		Vector3 textureNormal = /*new Vector3(0,0,1);//*/ normalTexture.retrieveVector3(new Vector3(), context.texturePosition.copy().multiply(this.textureScale));
 
 		return context.normalMatrix.multiply(textureNormal);
 	}

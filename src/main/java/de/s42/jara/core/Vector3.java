@@ -35,7 +35,7 @@ public class Vector3
 
 	public final static Vector3 ZERO = new Vector3(0.0);
 	public final static Vector3 ONE = new Vector3(1.0);
-	
+
 	public final static Vector3 ORIGIN = new Vector3(0.0);
 
 	public final static Vector3 UP = new Vector3(0.0, 1.0, 0.0);
@@ -51,21 +51,21 @@ public class Vector3
 	{
 	}
 
-	public Vector3( double x,  double y,  double z)
+	public Vector3(double x, double y, double z)
 	{
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public Vector3( double scalar)
+	public Vector3(double scalar)
 	{
 		this.x = scalar;
 		this.y = scalar;
 		this.z = scalar;
 	}
 
-	public Vector3( Vector3 toCopy)
+	public Vector3(Vector3 toCopy)
 	{
 		assert toCopy != null;
 
@@ -101,7 +101,7 @@ public class Vector3
 	 * @param spreadAngle has to be between 0.0 and 1.0
 	 * @return
 	 */
-	public static Vector3 createSphereRandomVector( Vector3 normal, double spreadAngle)
+	public static Vector3 createSphereRandomVector(Vector3 normal, double spreadAngle)
 	{
 		assert normal != null;
 		assert normal.isUnitVector();
@@ -148,7 +148,7 @@ public class Vector3
 	 * @param spread has to be between 0.0 and 1.0
 	 * @return
 	 */
-	public static Vector3 createSphereRingRandomVector( Vector3 normal, double spread)
+	public static Vector3 createSphereRingRandomVector(Vector3 normal, double spread)
 	{
 		assert normal != null;
 		assert normal.isUnitVector();
@@ -200,7 +200,7 @@ public class Vector3
 	 * @param spreadAngle has to be between 0.0 and 1.0
 	 * @return
 	 */
-	public static Vector3 createSphereGaussianVector( Vector3 normal, double spreadAngle)
+	public static Vector3 createSphereGaussianVector(Vector3 normal, double spreadAngle)
 	{
 		assert normal != null;
 		assert normal.isUnitVector();
@@ -249,7 +249,7 @@ public class Vector3
 	 * @param normal
 	 * @return
 	 */
-	public static Vector3 createHemisphereRandomVector( Vector3 normal)
+	public static Vector3 createHemisphereRandomVector(Vector3 normal)
 	{
 		assert normal != null;
 		assert normal.isUnitVector();
@@ -275,7 +275,7 @@ public class Vector3
 		}
 	}
 
-	public Vector3 set( double x,  double y,  double z)
+	public Vector3 set(double x, double y, double z)
 	{
 		this.x = x;
 		this.y = y;
@@ -295,7 +295,7 @@ public class Vector3
 		return new Vector3(this);
 	}
 
-	public Vector3 copy( Vector3 toCopy)
+	public Vector3 copy(Vector3 toCopy)
 	{
 		assert toCopy != null;
 
@@ -306,7 +306,7 @@ public class Vector3
 		return this;
 	}
 
-	public Vector3 subtract( Vector3 other)
+	public Vector3 subtract(Vector3 other)
 	{
 		assert other != null;
 
@@ -317,7 +317,7 @@ public class Vector3
 		return this;
 	}
 
-	public Vector3 subtract( double sub)
+	public Vector3 subtract(double sub)
 	{
 		x -= sub;
 		y -= sub;
@@ -326,7 +326,7 @@ public class Vector3
 		return this;
 	}
 
-	public Vector3 add( Vector3 other)
+	public Vector3 add(Vector3 other)
 	{
 		assert other != null;
 
@@ -337,7 +337,7 @@ public class Vector3
 		return this;
 	}
 
-	public Vector3 add( double add)
+	public Vector3 add(double add)
 	{
 		x += add;
 		y += add;
@@ -346,7 +346,7 @@ public class Vector3
 		return this;
 	}
 
-	public Vector3 add( double x,  double y,  double z)
+	public Vector3 add(double x, double y, double z)
 	{
 		this.x += x;
 		this.y += y;
@@ -391,7 +391,7 @@ public class Vector3
 		return this;
 	}
 
-	public Vector3 lerp( Vector3 other, double blend)
+	public Vector3 lerp(Vector3 other, double blend)
 	{
 		assert other != null;
 		assert blend >= 0.0 && blend <= 1.0;
@@ -404,14 +404,14 @@ public class Vector3
 		return this;
 	}
 
-	public Vector3 reflect( Vector3 normal)
+	public Vector3 reflect(Vector3 normal)
 	{
 		assert normal != null;
 
 		return subtract(normal.copy().multiply(2.0 * dot(normal)));
 	}
 
-	public Vector3 refract( Vector3 normal,  double ior)
+	public Vector3 refract(Vector3 normal, double ior)
 	{
 		assert normal != null;
 
@@ -448,14 +448,14 @@ public class Vector3
 		return this;
 	}
 
-	public double dot( Vector3 other)
+	public double dot(Vector3 other)
 	{
 		assert other != null;
 
 		return x * other.x + y * other.y + z * other.z;
 	}
 
-	public Vector3 cross( Vector3 other)
+	public Vector3 cross(Vector3 other)
 	{
 		assert other != null;
 
@@ -470,7 +470,7 @@ public class Vector3
 		return this;
 	}
 
-	public double distanceSquared( Vector3 other)
+	public double distanceSquared(Vector3 other)
 	{
 		assert other != null;
 
@@ -481,14 +481,14 @@ public class Vector3
 		return dx * dx + dy * dy * dz * dz;
 	}
 
-	public double distance( Vector3 other)
+	public double distance(Vector3 other)
 	{
 		assert other != null;
 
 		return Math.sqrt(distanceSquared(other));
 	}
 
-	public Vector3 multiply( double scalar)
+	public Vector3 multiply(double scalar)
 	{
 		x *= scalar;
 		y *= scalar;
@@ -497,7 +497,7 @@ public class Vector3
 		return this;
 	}
 
-	public Vector3 multiply( Vector3 scalar)
+	public Vector3 multiply(Vector3 scalar)
 	{
 		x *= scalar.x;
 		y *= scalar.y;
@@ -506,7 +506,7 @@ public class Vector3
 		return this;
 	}
 
-	public Vector3 divide( double scalar)
+	public Vector3 divide(double scalar)
 	{
 		assert scalar != 0.0;
 
@@ -517,7 +517,7 @@ public class Vector3
 		return this;
 	}
 
-	public Vector3 divide( Vector3 other)
+	public Vector3 divide(Vector3 other)
 	{
 		assert other != null;
 		assert other.x != 0.0;
@@ -531,7 +531,7 @@ public class Vector3
 		return this;
 	}
 
-	public Vector3 min( Vector3 other)
+	public Vector3 min(Vector3 other)
 	{
 		assert other != null;
 
@@ -542,7 +542,7 @@ public class Vector3
 		return this;
 	}
 
-	public Vector3 max( Vector3 other)
+	public Vector3 max(Vector3 other)
 	{
 		assert other != null;
 
@@ -553,7 +553,7 @@ public class Vector3
 		return this;
 	}
 
-	public boolean smaller( Vector3 other)
+	public boolean smaller(Vector3 other)
 	{
 		assert other != null;
 
@@ -562,7 +562,7 @@ public class Vector3
 			&& z < other.z;
 	}
 
-	public boolean bigger( Vector3 other)
+	public boolean bigger(Vector3 other)
 	{
 		assert other != null;
 
@@ -576,7 +576,7 @@ public class Vector3
 		return x;
 	}
 
-	public void setX( double x)
+	public void setX(double x)
 	{
 		this.x = x;
 	}
@@ -586,7 +586,7 @@ public class Vector3
 		return y;
 	}
 
-	public void setY( double y)
+	public void setY(double y)
 	{
 		this.y = y;
 	}
@@ -596,7 +596,7 @@ public class Vector3
 		return z;
 	}
 
-	public void setZ( double z)
+	public void setZ(double z)
 	{
 		this.z = z;
 	}

@@ -41,12 +41,12 @@ public class Matrix3
 		m[0][0] = 1.0;
 		m[0][1] = 0.0;
 		m[0][2] = 0.0;
-		
+
 		//-z
 		m[1][0] = 0.0;
 		m[1][1] = 0.0;
 		m[1][2] = -1.0;
-		
+
 		//y
 		m[2][0] = 0.0;
 		m[2][1] = 1.0;
@@ -61,12 +61,12 @@ public class Matrix3
 		m[0][0] = -1.0;
 		m[0][1] = 0.0;
 		m[0][2] = 0.0;
-		
+
 		//z
 		m[1][0] = 0.0;
 		m[1][1] = 0.0;
 		m[1][2] = 1.0;
-		
+
 		//-y
 		m[2][0] = 0.0;
 		m[2][1] = -1.0;
@@ -93,14 +93,21 @@ public class Matrix3
 
 		return this;
 	}
-	
-	public Matrix3 transpose() {
+
+	public Matrix3 transpose()
+	{
 
 		double tmp;
 
-		tmp = m[1][0]; m[1][0] = m[0][1]; m[0][1] = tmp;
-		tmp = m[2][0]; m[2][0] = m[0][2]; m[0][2] = tmp;
-		tmp = m[1][2]; m[1][2] = m[2][1]; m[2][1] = tmp;
+		tmp = m[1][0];
+		m[1][0] = m[0][1];
+		m[0][1] = tmp;
+		tmp = m[2][0];
+		m[2][0] = m[0][2];
+		m[0][2] = tmp;
+		tmp = m[1][2];
+		m[1][2] = m[2][1];
+		m[2][1] = tmp;
 
 		return this;
 	}
@@ -127,13 +134,13 @@ public class Matrix3
 		return this;
 	}
 
-	public void computeNormalMatrixFromDirection( Vector3 normal)
+	public void computeNormalMatrixFromDirection(Vector3 normal)
 	{
 		assert normal != null;
 
 		//if the normal is to close to UP or BOTTOM -> we have to avoid the collapsing matrix
 		double dot = normal.dot(Vector3.UP);
-		if (dot >  JaraMath.ONE_MINUS_EPSILON) {
+		if (dot > JaraMath.ONE_MINUS_EPSILON) {
 
 			textureUp();
 		}
@@ -162,9 +169,9 @@ public class Matrix3
 	}
 
 	public Matrix3 setAll(
-		final double m00,  double m01,  double m02,
-		final double m10,  double m11,  double m12,
-		final double m20,  double m21,  double m22
+		final double m00, double m01, double m02,
+		final double m10, double m11, double m12,
+		final double m20, double m21, double m22
 	)
 	{
 		m[0][0] = m00;
@@ -180,7 +187,7 @@ public class Matrix3
 		return this;
 	}
 
-	public Matrix3 set( int x,  int y,  double value)
+	public Matrix3 set(int x, int y, double value)
 	{
 		assert x >= 0 && x <= 2;
 		assert y >= 0 && y <= 2;
@@ -190,7 +197,7 @@ public class Matrix3
 		return this;
 	}
 
-	public Matrix3 setColumn( int x,  Vector3 column)
+	public Matrix3 setColumn(int x, Vector3 column)
 	{
 		assert x >= 0 && x <= 2;
 		assert column != null;
@@ -202,7 +209,7 @@ public class Matrix3
 		return this;
 	}
 
-	public Matrix3 setRow( int y,  Vector3 row)
+	public Matrix3 setRow(int y, Vector3 row)
 	{
 		assert y >= 0 && y <= 2;
 		assert row != null;

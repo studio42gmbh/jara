@@ -34,7 +34,6 @@ import de.s42.jara.enitites.lights.DirectionalLight;
 import de.s42.jara.enitites.primitives.Plane;
 import de.s42.jara.enitites.primitives.Sphere;
 import de.s42.jara.materials.Material;
-import de.s42.jara.materials.PbrMaterial;
 import de.s42.jara.materials.Texture;
 
 /**
@@ -46,7 +45,7 @@ public class Transparent implements SceneLoader
 	private final static AssetManager.Materials FLOOR_MATERIAL = AssetManager.Materials.TerazzoBrickWork;
 
 	@Override
-	public Scene loadScene( AssetManager assets)
+	public Scene loadScene(AssetManager assets)
 	{
 		assert assets != null;
 
@@ -79,8 +78,7 @@ public class Transparent implements SceneLoader
 			(double) Configuration.getWidth() / (double) Configuration.getHeight()
 		);
 		scene.setCamera(camera);
-		
-		
+
 		Material sphereMaterial = new Material(
 			Color.Black,
 			new Color(1.0, 1.0, 1.0),

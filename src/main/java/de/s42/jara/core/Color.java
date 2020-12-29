@@ -94,7 +94,7 @@ public class Color
 		a = 1.0;
 	}
 
-	public Color( double r,  double g,  double b)
+	public Color(double r, double g, double b)
 	{
 		this.r = r;
 		this.g = g;
@@ -102,7 +102,7 @@ public class Color
 		this.a = 1.0;
 	}
 
-	public Color( double r,  double g,  double b,  double a)
+	public Color(double r, double g, double b, double a)
 	{
 		this.r = r;
 		this.g = g;
@@ -110,7 +110,7 @@ public class Color
 		this.a = a;
 	}
 
-	public Color( Color toCopy)
+	public Color(Color toCopy)
 	{
 		assert toCopy != null;
 
@@ -146,7 +146,7 @@ public class Color
 		return (ia << 24) | (ir << 16) | (ig << 8) | ib;
 	}
 
-	public int getScaledARGB8( double scale)
+	public int getScaledARGB8(double scale)
 	{
 		double scale255 = scale * 255.0;
 		int ir = Math.min(Math.max(0, (int) (r * scale255 + 0.5)), 255);
@@ -157,7 +157,7 @@ public class Color
 		return (ia << 24) | (ir << 16) | (ig << 8) | ib;
 	}
 
-	public int getScaledRGB8( double scale)
+	public int getScaledRGB8(double scale)
 	{
 		double scale255 = scale * 255.0;
 		int ir = Math.min(Math.max(0, (int) (r * scale255 + 0.5)), 255);
@@ -179,7 +179,7 @@ public class Color
 		return this;
 	}
 
-	public Color set( double r,  double g,  double b)
+	public Color set(double r, double g, double b)
 	{
 		this.r = r;
 		this.g = g;
@@ -189,7 +189,7 @@ public class Color
 		return this;
 	}
 
-	public Color set( double r,  double g,  double b,  double a)
+	public Color set(double r, double g, double b, double a)
 	{
 		this.r = r;
 		this.g = g;
@@ -199,7 +199,7 @@ public class Color
 		return this;
 	}
 
-	public Color copy( Color other)
+	public Color copy(Color other)
 	{
 		assert other != null;
 
@@ -211,7 +211,7 @@ public class Color
 		return this;
 	}
 
-	public Color copy( Vector3 other)
+	public Color copy(Vector3 other)
 	{
 		assert other != null;
 
@@ -227,7 +227,7 @@ public class Color
 		return new Color(this);
 	}
 
-	public Color copyRGB( Color other)
+	public Color copyRGB(Color other)
 	{
 		assert other != null;
 
@@ -238,7 +238,7 @@ public class Color
 		return this;
 	}
 
-	public Color add( Color other)
+	public Color add(Color other)
 	{
 		assert other != null;
 
@@ -250,7 +250,7 @@ public class Color
 		return this;
 	}
 
-	public Color add( double value)
+	public Color add(double value)
 	{
 		r += value;
 		g += value;
@@ -260,7 +260,7 @@ public class Color
 		return this;
 	}
 
-	public Color addRGB( Color other)
+	public Color addRGB(Color other)
 	{
 		assert other != null;
 
@@ -271,7 +271,7 @@ public class Color
 		return this;
 	}
 
-	public Color addRGB( double value)
+	public Color addRGB(double value)
 	{
 		r += value;
 		g += value;
@@ -280,7 +280,7 @@ public class Color
 		return this;
 	}
 
-	public Color addSoftRGB( Color other)
+	public Color addSoftRGB(Color other)
 	{
 		assert other != null;
 
@@ -291,7 +291,7 @@ public class Color
 		return this;
 	}
 
-	public Color subtract( Color other)
+	public Color subtract(Color other)
 	{
 		assert other != null;
 
@@ -303,7 +303,7 @@ public class Color
 		return this;
 	}
 
-	public Color subtract( double value)
+	public Color subtract(double value)
 	{
 		r -= value;
 		g -= value;
@@ -313,7 +313,7 @@ public class Color
 		return this;
 	}
 
-	public Color subtractRGB( Color other)
+	public Color subtractRGB(Color other)
 	{
 		assert other != null;
 
@@ -324,7 +324,7 @@ public class Color
 		return this;
 	}
 
-	public Color subtractRGB( double value)
+	public Color subtractRGB(double value)
 	{
 		r -= value;
 		g -= value;
@@ -333,7 +333,7 @@ public class Color
 		return this;
 	}
 
-	public Color multiplyRGB( double scalar)
+	public Color multiplyRGB(double scalar)
 	{
 		r *= scalar;
 		g *= scalar;
@@ -342,7 +342,7 @@ public class Color
 		return this;
 	}
 
-	public Color multiply( double scalar)
+	public Color multiply(double scalar)
 	{
 		r *= scalar;
 		g *= scalar;
@@ -352,7 +352,7 @@ public class Color
 		return this;
 	}
 
-	public Color divideRGB( double scalar)
+	public Color divideRGB(double scalar)
 	{
 		assert scalar != 0.0;
 
@@ -363,7 +363,7 @@ public class Color
 		return this;
 	}
 
-	public Color divide( double scalar)
+	public Color divide(double scalar)
 	{
 		assert scalar != 0.0;
 
@@ -375,7 +375,7 @@ public class Color
 		return this;
 	}
 
-	public Color multiply( Color other)
+	public Color multiply(Color other)
 	{
 		assert other != null;
 
@@ -387,7 +387,7 @@ public class Color
 		return this;
 	}
 
-	public Color multiplyRGB( Color other)
+	public Color multiplyRGB(Color other)
 	{
 		assert other != null;
 
@@ -398,7 +398,7 @@ public class Color
 		return this;
 	}
 
-	public Color powRGB( double exponent)
+	public Color powRGB(double exponent)
 	{
 		r = Math.pow(r, exponent);
 		g = Math.pow(g, exponent);
@@ -437,7 +437,7 @@ public class Color
 		return this;
 	}
 
-	public Color blend( Color other,  double blend)
+	public Color blend(Color other, double blend)
 	{
 		assert other != null;
 		assert blend >= 0.0 && blend <= 1.0;
@@ -451,7 +451,7 @@ public class Color
 		return this;
 	}
 
-	public Color blendRGB( Color other,  double blend)
+	public Color blendRGB(Color other, double blend)
 	{
 		assert other != null;
 		assert blend >= 0.0 && blend <= 1.0;
@@ -479,7 +479,7 @@ public class Color
 		return JaraMath.saturate(r);
 	}
 
-	public void setR( double r)
+	public void setR(double r)
 	{
 		this.r = r;
 	}
@@ -494,7 +494,7 @@ public class Color
 		return JaraMath.saturate(g);
 	}
 
-	public void setG( double g)
+	public void setG(double g)
 	{
 		this.g = g;
 	}
@@ -509,7 +509,7 @@ public class Color
 		return JaraMath.saturate(b);
 	}
 
-	public void setB( double b)
+	public void setB(double b)
 	{
 		this.b = b;
 	}
@@ -524,7 +524,7 @@ public class Color
 		return JaraMath.saturate(a);
 	}
 
-	public void setA( double a)
+	public void setA(double a)
 	{
 		this.a = a;
 	}

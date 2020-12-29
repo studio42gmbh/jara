@@ -33,7 +33,7 @@ public abstract class Entity
 {
 	public Vector3 position;
 
-	public Entity( Vector3 position)
+	public Entity(Vector3 position)
 	{
 		assert position != null;
 
@@ -45,7 +45,7 @@ public abstract class Entity
 		return position;
 	}
 
-	public void setPosition( Vector3 position)
+	public void setPosition(Vector3 position)
 	{
 		assert position != null;
 

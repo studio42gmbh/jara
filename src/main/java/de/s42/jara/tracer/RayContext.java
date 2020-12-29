@@ -57,7 +57,7 @@ public class RayContext
 	public final Vector3 lastOrigin = new Vector3();
 	public final Vector3 lastDirection = new Vector3();
 
-	public RayContext( Raytracer raytracer)
+	public RayContext(Raytracer raytracer)
 	{
 		assert raytracer != null;
 

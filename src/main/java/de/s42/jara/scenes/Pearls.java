@@ -46,7 +46,7 @@ public class Pearls implements SceneLoader
 	private final static AssetManager.Materials FLOOR_MATERIAL = AssetManager.Materials.GoldOre;
 
 	@Override
-	public Scene loadScene( AssetManager assets)
+	public Scene loadScene(AssetManager assets)
 	{
 		assert assets != null;
 

@@ -66,7 +66,7 @@ public class Jara
 			app.render();
 
 			//at most print one lap per second
-			//@todo BS JARA might want to provide that debouncing to Log
+			//@todo JARA might want to provide that debouncing to Log
 			if (System.nanoTime() - lastLogTime > 1000000000L) {
 				lastLogTime = System.nanoTime();
 

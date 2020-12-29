@@ -35,7 +35,7 @@ public abstract class Light extends Entity
 {
 	public final Color color = new Color();
 
-	public Light( Color color)
+	public Light(Color color)
 	{
 		super(new Vector3());
 
@@ -49,7 +49,7 @@ public abstract class Light extends Entity
 		return color;
 	}
 
-	public void setColor( Color color)
+	public void setColor(Color color)
 	{
 		assert color != null;
 

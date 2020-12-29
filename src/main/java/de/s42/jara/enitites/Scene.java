@@ -60,26 +60,26 @@ public class Scene extends Entity
 		this.name = "Unnamed";
 	}
 
-	public Scene( String name)
+	public Scene(String name)
 	{
 		super(Vector3.ORIGIN);
-		
+
 		assert name != null;
-		
+
 		this.name = name;
 	}
 
-	public void add( PhysicalEntity entity)
+	public void add(PhysicalEntity entity)
 	{
 		assert entity != null;
-		
+
 		spatial.add(entity);
 	}
 
-	public void add( List<? extends PhysicalEntity> entities)
+	public void add(List<? extends PhysicalEntity> entities)
 	{
 		assert entities != null;
-		
+
 		spatial.add(entities);
 	}
 
@@ -93,12 +93,12 @@ public class Scene extends Entity
 		}
 	}
 
-	public boolean intersect( RayContext context)
+	public boolean intersect(RayContext context)
 	{
 		return spatial.intersect(context);
 	}
 
-	public void background( RayContext context)
+	public void background(RayContext context)
 	{
 		assert context != null;
 
@@ -176,7 +176,7 @@ public class Scene extends Entity
 		return camera;
 	}
 
-	public void setCamera( Camera camera)
+	public void setCamera(Camera camera)
 	{
 		assert camera != null;
 
@@ -188,7 +188,7 @@ public class Scene extends Entity
 		return directionalLight;
 	}
 
-	public void setDirectionalLight( DirectionalLight directionalLight)
+	public void setDirectionalLight(DirectionalLight directionalLight)
 	{
 		this.directionalLight = directionalLight;
 	}
@@ -198,7 +198,7 @@ public class Scene extends Entity
 		return ambientLight;
 	}
 
-	public void setAmbientLight( AmbientLight ambientLight)
+	public void setAmbientLight(AmbientLight ambientLight)
 	{
 		this.ambientLight = ambientLight;
 	}

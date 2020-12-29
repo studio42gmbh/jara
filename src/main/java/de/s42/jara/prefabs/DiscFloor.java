@@ -42,7 +42,6 @@ public final class DiscFloor
 {
 	private DiscFloor()
 	{
-
 	}
 
 	public static void load(Scene scene, AssetManager assets, Vector3 translation, Vector3 scale)

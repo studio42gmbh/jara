@@ -53,14 +53,14 @@ public final class FileHelper
 		//do nothing
 	}
 
-	public final static boolean fileExists( String path)
+	public final static boolean fileExists(String path)
 	{
 		assert path != null;
 
 		return fileExists(Path.of(path));
 	}
 
-	public final static boolean fileExists( Path path)
+	public final static boolean fileExists(Path path)
 	{
 		assert path != null;
 
@@ -72,7 +72,7 @@ public final class FileHelper
 		return FileSystemView.getFileSystemView().getHomeDirectory().toPath();
 	}
 
-	public final static boolean hasResource( Class moduleClass,  String relativeResourceName)
+	public final static boolean hasResource(Class moduleClass, String relativeResourceName)
 	{
 		assert moduleClass != null;
 		assert relativeResourceName != null;
@@ -80,7 +80,7 @@ public final class FileHelper
 		return (moduleClass.getResource(relativeResourceName) != null);
 	}
 
-	public final static InputStream getResourceAsStream( Class moduleClass,  String relativeResourceName)
+	public final static InputStream getResourceAsStream(Class moduleClass, String relativeResourceName)
 	{
 		assert moduleClass != null;
 		assert relativeResourceName != null;
@@ -94,7 +94,7 @@ public final class FileHelper
 		return in;
 	}
 
-	public static String getFileAsString( Path path) throws IOException
+	public static String getFileAsString(Path path) throws IOException
 	{
 		assert path != null;
 
@@ -102,14 +102,14 @@ public final class FileHelper
 		return StandardCharsets.UTF_8.decode(ByteBuffer.wrap(encoded)).toString();
 	}
 
-	public final static InputStream getFileAsStream( String fileName)
+	public final static InputStream getFileAsStream(String fileName)
 	{
 		assert fileName != null;
 
 		return getFileAsStream(Path.of(fileName));
 	}
 
-	public final static InputStream getFileAsStream( Path file)
+	public final static InputStream getFileAsStream(Path file)
 	{
 		assert file != null;
 
@@ -121,14 +121,14 @@ public final class FileHelper
 		}
 	}
 
-	public final static BufferedImage getResourceAsImage( Class moduleClass,  String relativeResourceName)
+	public final static BufferedImage getResourceAsImage(Class moduleClass, String relativeResourceName)
 	{
 		assert moduleClass != null;
 		assert relativeResourceName != null;
 
 		try {
 			BufferedImage image;
-			try ( InputStream in = FileHelper.getResourceAsStream(moduleClass, relativeResourceName)) {
+			try (InputStream in = FileHelper.getResourceAsStream(moduleClass, relativeResourceName)) {
 				image = ImageIO.read(in);
 				in.close();
 			}
@@ -139,20 +139,20 @@ public final class FileHelper
 		}
 	}
 
-	public final static BufferedImage getFileAsImage( String fileName)
+	public final static BufferedImage getFileAsImage(String fileName)
 	{
 		assert fileName != null;
 
 		return getFileAsImage(Path.of(fileName));
 	}
 
-	public final static BufferedImage getFileAsImage( Path file)
+	public final static BufferedImage getFileAsImage(Path file)
 	{
 		assert file != null;
 
 		try {
 			BufferedImage image;
-			try ( InputStream in = FileHelper.getFileAsStream(file)) {
+			try (InputStream in = FileHelper.getFileAsStream(file)) {
 				image = ImageIO.read(in);
 				in.close();
 			}
@@ -163,7 +163,7 @@ public final class FileHelper
 		}
 	}
 
-	public final static String getResource( Class moduleClass,  String relativeResourceName)
+	public final static String getResource(Class moduleClass, String relativeResourceName)
 	{
 		assert moduleClass != null;
 		assert relativeResourceName != null;
@@ -199,21 +199,21 @@ public final class FileHelper
 		}
 	}
 
-	public final static String getModuleVersion( Class moduleClass)
+	public final static String getModuleVersion(Class moduleClass)
 	{
 		assert moduleClass != null;
 
 		return getResource(moduleClass, moduleClass.getSimpleName() + ".version");
 	}
 
-	public static void saveImageAsFilePng( BufferedImage image,  String outputFile) throws IOException
+	public static void saveImageAsFilePng(BufferedImage image, String outputFile) throws IOException
 	{
 		assert outputFile != null;
 
 		saveImageAsFilePng(image, Path.of(outputFile));
 	}
 
-	public static void saveImageAsFilePng( BufferedImage image,  Path outputFile) throws IOException
+	public static void saveImageAsFilePng(BufferedImage image, Path outputFile) throws IOException
 	{
 		assert image != null;
 		assert outputFile != null;
@@ -225,28 +225,28 @@ public final class FileHelper
 		param.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
 		param.setCompressionQuality(1.0f);
 
-		try ( ImageOutputStream out = new FileImageOutputStream(outputFile.toFile())) {
+		try (ImageOutputStream out = new FileImageOutputStream(outputFile.toFile())) {
 			writer.setOutput(out);
 			writer.write(null, new IIOImage(image, null, null), param);
 			writer.dispose();
 		}
 	}
 
-	public static void saveImageAsFileJpg( BufferedImage image,  String outputFile) throws IOException
+	public static void saveImageAsFileJpg(BufferedImage image, String outputFile) throws IOException
 	{
 		assert outputFile != null;
 
 		saveImageAsFileJpg(image, Path.of(outputFile), Configuration.getJpgQuality());
 	}
 
-	public static void saveImageAsFileJpg( BufferedImage image,  String outputFile,  float quality) throws IOException
+	public static void saveImageAsFileJpg(BufferedImage image, String outputFile, float quality) throws IOException
 	{
 		assert outputFile != null;
 
 		saveImageAsFileJpg(image, Path.of(outputFile), quality);
 	}
 
-	public static void saveImageAsFileJpg( BufferedImage image,  Path outputFile,  float quality) throws IOException
+	public static void saveImageAsFileJpg(BufferedImage image, Path outputFile, float quality) throws IOException
 	{
 		assert image != null;
 		assert outputFile != null;
@@ -259,7 +259,7 @@ public final class FileHelper
 		param.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
 		param.setCompressionQuality(quality);
 
-		try ( ImageOutputStream out = new FileImageOutputStream(outputFile.toFile())) {
+		try (ImageOutputStream out = new FileImageOutputStream(outputFile.toFile())) {
 			writer.setOutput(out);
 			writer.write(null, new IIOImage(image, null, null), param);
 			writer.dispose();

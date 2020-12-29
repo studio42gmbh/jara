@@ -30,12 +30,11 @@ import de.s42.jara.core.Color;
 import de.s42.jara.enitites.Scene;
 import de.s42.jara.core.Vector3;
 import de.s42.jara.enitites.Camera;
-import de.s42.jara.enitites.lights.AmbientLight;
-import de.s42.jara.enitites.lights.DirectionalLight;
 import de.s42.jara.enitites.primitives.Plane;
 import de.s42.jara.enitites.primitives.Sphere;
 import de.s42.jara.materials.Material;
 import de.s42.jara.materials.RainbowMaterial;
+import de.s42.jara.materials.Texture;
 
 /**
  *
@@ -44,27 +43,24 @@ import de.s42.jara.materials.RainbowMaterial;
 public class Spheres implements SceneLoader
 {
 	@Override
-	public Scene loadScene( AssetManager assets)
+	public Scene loadScene(AssetManager assets)
 	{
 		assert assets != null;
-		
+
 		Scene scene = new Scene("Spheres");
 
-		DirectionalLight sun = new DirectionalLight(
-			new Vector3(0.5, 1.0, 0.0),
-			new Color(1.1, 1.1, 1.05),
-			0.98, //discSize
-			0.98, //rampUpBrightness			
-			4.0, //rampUpExponent 
-			4.0, //rampUpScale 
-			26.0 //attenuationExponent
+		Texture background = assets.loadBackground(
+			AssetManager.Backgrounds.Sunset,
+			0.9, //rampUpBrightness
+			5.0, //rampUpExponent
+			3.0 //rampUpScale
 		);
-		scene.setDirectionalLight(sun);
-
-		AmbientLight ambient = new AmbientLight(
-			new Color(0.05, 0.20, 0.45)
-		);
-		scene.setAmbientLight(ambient);
+		scene.setBackgroundTextureSmoothing(5.0);
+		scene.setBackgroundTextureSmoothingRender(1.0);
+		scene.setBackgroundTexture(background);
+		scene.setShowDirectBackground(true);
+		scene.setBackgroundTextureOffsetX(0.55);
+		scene.setBackgroundColor(new Color(0.05, 0.05, 0.05, 0.0));
 
 		Camera camera = new Camera(
 			new Vector3(16.0, 7.0, 7.0),
@@ -101,14 +97,14 @@ public class Spheres implements SceneLoader
 
 		Material mirror = new Material(
 			Color.Black,
-			Color.White,
+			new Color(0.85, 0.83, 0.75, 1.0),
 			0.9,
-			0.0,
+			0.1,
 			Material.IOR_STEEL
 		);
 
 		Material glowy = new Material(
-			new Color(2.95, 2.95, 2.93, 1.0),
+			new Color(1.25, 1.25, 1.23, 1.0),
 			Color.White,
 			0.0,
 			0.0,
@@ -124,13 +120,24 @@ public class Spheres implements SceneLoader
 			1.0 //amplitude
 		);
 
+		Material transparentMaterial = new Material(
+			Color.Black,
+			new Color(0.9, 0.9, 0.1, 1.0),
+			0.0,
+			0.0,
+			Material.IOR_PLASTIC
+		);
+		transparentMaterial.transparency = 1.0;
+
+		Material floorMaterial = assets.loadPbrMaterial(AssetManager.Materials.CobbleStone, new Vector3(0.025));
+
 		Sphere sphere1 = new Sphere(new Vector3(-8.0, 0.0, -9.0), rainbow, 6.0);
 		scene.add(sphere1);
 
 		Sphere sphere2 = new Sphere(new Vector3(4.0, 0.0, 4.0), plasticYellow, 3.0);
 		scene.add(sphere2);
 
-		Sphere sphere3 = new Sphere(new Vector3(0.0, 5.0, -10.0), stone, 3.0);
+		Sphere sphere3 = new Sphere(new Vector3(0.0, 5.0, -10.0), transparentMaterial, 3.0);
 		scene.add(sphere3);
 
 		Sphere sphere4 = new Sphere(new Vector3(6.0, 0.0, -13.0), plasticRed, 5.0);
@@ -153,7 +160,7 @@ public class Spheres implements SceneLoader
 
 		Plane plane = new Plane(
 			new Vector3(0.0, -7.0, 0.0),
-			stone,
+			floorMaterial,
 			new Vector3(0.0, 1.0, 0.0)
 		);
 		scene.add(plane);

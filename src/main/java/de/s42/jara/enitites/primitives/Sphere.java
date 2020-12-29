@@ -38,7 +38,7 @@ public class Sphere extends PhysicalEntity
 	public final double radius;
 	public final double radiusSquared;
 
-	public Sphere( Vector3 position,  Material material,  double radius)
+	public Sphere(Vector3 position, Material material, double radius)
 	{
 		super(position, material);
 
@@ -53,7 +53,7 @@ public class Sphere extends PhysicalEntity
 	}
 
 	@Override
-	public boolean intersect( RayContext context)
+	public boolean intersect(RayContext context)
 	{
 		assert context != null;
 
@@ -81,7 +81,7 @@ public class Sphere extends PhysicalEntity
 		double deltaDistances = Math.sqrt(radiusSquared - closestApproachDistanceSquared);
 
 		//if inside the spphere -> find 2nd hit point 
-		//@todo BS JARA optimize check inside sphere removing JaraMath.ONE_PLUS_EPSILON
+		//@todo JARA optimize check inside sphere removing JaraMath.ONE_PLUS_EPSILON
 		if (deltaCenterToRayOrigin.squaredLength() <= radiusSquared * JaraMath.ONE_PLUS_EPSILON) {
 			deltaDistances = -deltaDistances;
 			context.inbound = false;

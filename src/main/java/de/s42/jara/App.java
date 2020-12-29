@@ -36,7 +36,6 @@ import java.awt.RenderingHints;
 import java.awt.SplashScreen;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;

@@ -39,7 +39,7 @@ public class RenderBuffer
 	private final BufferedImage buffer;
 	private final ColorArray bufferedColors;
 
-	public RenderBuffer( int width,  int height)
+	public RenderBuffer(int width, int height)
 	{
 		assert width > 0;
 		assert height > 0;
@@ -77,7 +77,7 @@ public class RenderBuffer
 		}
 	}
 
-	public void setColor( int x,  int y,  Color color)
+	public void setColor(int x, int y, Color color)
 	{
 		assert x >= 0 && x < width;
 		assert y >= 0 && y < height;
@@ -86,7 +86,7 @@ public class RenderBuffer
 		bufferedColors.set(x + width * y, color);
 	}
 
-	public Color getColor( int x,  int y, Color result)
+	public Color getColor(int x, int y, Color result)
 	{
 		assert x >= 0 && x < width;
 		assert y >= 0 && y < height;
@@ -94,7 +94,7 @@ public class RenderBuffer
 		return bufferedColors.get(x + width * y, result);
 	}
 
-	public void addColor( int x,  int y,  Color color)
+	public void addColor(int x, int y, Color color)
 	{
 		assert x >= 0 && x < width;
 		assert y >= 0 && y < height;
@@ -103,12 +103,12 @@ public class RenderBuffer
 		bufferedColors.add(x + width * y, color);
 	}
 
-	public synchronized void blitColorsToBuffer( double scale)
+	public synchronized void blitColorsToBuffer(double scale)
 	{
 		blitColorsToBuffer(scale, 0, 0, width, height);
 	}
 
-	public synchronized void blitColorsToBuffer( double scale,  int x,  int y,  int w,  int h)
+	public synchronized void blitColorsToBuffer(double scale, int x, int y, int w, int h)
 	{
 		assert x >= 0 && x < width;
 		assert y >= 0 && y < height;

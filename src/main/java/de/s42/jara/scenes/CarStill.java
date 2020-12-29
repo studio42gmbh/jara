@@ -48,16 +48,16 @@ public class CarStill implements SceneLoader
 		Scene scene = new Scene("Car Still");
 
 		Texture background = assets.loadBackground(
-			AssetManager.Backgrounds.SkyCloudy,
+			AssetManager.Backgrounds.Sunset,
 			0.9, //rampUpBrightness
 			5.0, //rampUpExponent
-			2.0 //rampUpScale
+			4.0 //rampUpScale
 		);
 		scene.setBackgroundTextureSmoothing(5.0);
 		scene.setBackgroundTextureSmoothingRender(1.0);
 		scene.setBackgroundTexture(background);
 		scene.setShowDirectBackground(true);
-		scene.setBackgroundTextureOffsetX(-0.15);
+		scene.setBackgroundTextureOffsetX(0.35);
 		scene.setBackgroundColor(new Color(0.05, 0.05, 0.05, 0.0));
 
 		Camera camera = new Camera(

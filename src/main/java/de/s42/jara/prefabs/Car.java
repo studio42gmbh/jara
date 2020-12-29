@@ -43,7 +43,6 @@ public final class Car
 {
 	private Car()
 	{
-
 	}
 
 	public static void load(Scene scene, AssetManager assets, Vector3 translation, Vector3 scale)

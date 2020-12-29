@@ -146,7 +146,7 @@ public class Raytracer
 				double xs = (xc * 2.0 - width) / width;
 				double ys = -((yc * 2.0 - height) / height);
 
-				//@todo BS JARA might want to try to create a real cirular jitter
+				//@todo JARA might want to try to create a real cirular jitter
 				/*
 				double theta = random.nextDouble(-Math.PI, +Math.PI);
 				double r = random.nextDouble();

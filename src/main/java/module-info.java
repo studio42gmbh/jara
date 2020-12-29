@@ -10,8 +10,10 @@
  * For details to the License read https://www.s42m.de/license
  */
 
-
-
+/**
+ *
+ * @author Benjamin.Schiller
+ */
 module de.sft.jara
 {
 	requires java.desktop;

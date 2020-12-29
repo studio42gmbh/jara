@@ -43,10 +43,9 @@ public final class House
 {
 	private House()
 	{
-
 	}
 
-	public static void load( Scene scene,  AssetManager assets,  Vector3 translation,  Vector3 scale)
+	public static void load(Scene scene, AssetManager assets, Vector3 translation, Vector3 scale)
 	{
 		assert scene != null;
 		assert assets != null;

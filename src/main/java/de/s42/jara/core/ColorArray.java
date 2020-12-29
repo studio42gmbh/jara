@@ -34,14 +34,14 @@ public class ColorArray
 	//contains r,g,b,a tupels
 	public final double[] data;
 
-	public ColorArray( int size)
+	public ColorArray(int size)
 	{
 		assert size > 0;
 
 		data = new double[size << 2];
 	}
 
-	public void setARGB8( int position, int argb)
+	public void setARGB8(int position, int argb)
 	{
 		assert position >= 0 && position < data.length >> 2;
 
@@ -56,7 +56,7 @@ public class ColorArray
 		data[dataPos + 3] = ONE_DIVIDED_BY_255 * (double) (argb & 0xFF);
 	}
 
-	public void setARGB8( int startPosition,  int length,  int[] argbArray)
+	public void setARGB8(int startPosition, int length, int[] argbArray)
 	{
 		assert startPosition >= 0 && startPosition < data.length >> 2;
 		assert startPosition + length >= 0 && startPosition + length < data.length >> 2;
@@ -79,7 +79,7 @@ public class ColorArray
 		}
 	}
 
-	public ColorArray set( int position,  double scalar)
+	public ColorArray set(int position, double scalar)
 	{
 		assert position >= 0 && position < data.length >> 2;
 
@@ -93,7 +93,7 @@ public class ColorArray
 		return this;
 	}
 
-	public ColorArray set( int position,  double r,  double g,  double b,  double a)
+	public ColorArray set(int position, double r, double g, double b, double a)
 	{
 		assert position >= 0 && position < data.length >> 2;
 
@@ -107,7 +107,7 @@ public class ColorArray
 		return this;
 	}
 
-	public ColorArray set( int position,  Color color)
+	public ColorArray set(int position, Color color)
 	{
 		assert position >= 0 && position < data.length >> 2;
 		assert color != null;
@@ -122,7 +122,7 @@ public class ColorArray
 		return this;
 	}
 
-	public Color get( int position, Color result)
+	public Color get(int position, Color result)
 	{
 		assert position >= 0 && position < data.length >> 2;
 		assert result != null;
@@ -137,7 +137,7 @@ public class ColorArray
 		return result;
 	}
 
-	public Vector3 get( int position, Vector3 result)
+	public Vector3 get(int position, Vector3 result)
 	{
 		assert position >= 0 && position < data.length >> 2;
 		assert result != null;
@@ -151,7 +151,7 @@ public class ColorArray
 		return result;
 	}
 
-	public int getScaledRGB8( int position,  double scale)
+	public int getScaledRGB8(int position, double scale)
 	{
 		assert position >= 0 && position < data.length >> 2;
 
@@ -165,7 +165,7 @@ public class ColorArray
 		return (255 << 24) | (ir << 16) | (ig << 8) | ib;
 	}
 
-	public int getScaledARGB8( int position,  double scale)
+	public int getScaledARGB8(int position, double scale)
 	{
 		assert position >= 0 && position < data.length >> 2;
 
@@ -180,7 +180,7 @@ public class ColorArray
 		return (ia << 24) | (ir << 16) | (ig << 8) | ib;
 	}
 
-	public double getColorVectorLength( int position)
+	public double getColorVectorLength(int position)
 	{
 		assert position >= 0 && position < data.length >> 2;
 
@@ -192,13 +192,13 @@ public class ColorArray
 
 		return Math.sqrt(r * r + g * g + b * b);
 	}
-	
-	public ColorArray multiply( int position,  double scalar)
+
+	public ColorArray multiply(int position, double scalar)
 	{
 		assert position >= 0 && position < data.length >> 2;
-		
+
 		int dataPos = position << 2;
-		
+
 		data[dataPos + 3] *= scalar;
 		data[dataPos + 2] *= scalar;
 		data[dataPos + 1] *= scalar;
@@ -207,7 +207,7 @@ public class ColorArray
 		return this;
 	}
 
-	public ColorArray multiply( double scalar)
+	public ColorArray multiply(double scalar)
 	{
 		for (int i = 0; i < data.length; ++i) {
 			data[i] *= scalar;
@@ -216,7 +216,7 @@ public class ColorArray
 		return this;
 	}
 
-	public ColorArray divide( double scalar)
+	public ColorArray divide(double scalar)
 	{
 		for (int i = 0; i < data.length; ++i) {
 			data[i] /= scalar;
@@ -225,7 +225,7 @@ public class ColorArray
 		return this;
 	}
 
-	public ColorArray subtract( double scalar)
+	public ColorArray subtract(double scalar)
 	{
 		for (int i = 0; i < data.length; ++i) {
 			data[i] -= scalar;
@@ -234,7 +234,7 @@ public class ColorArray
 		return this;
 	}
 
-	public ColorArray add( double scalar)
+	public ColorArray add(double scalar)
 	{
 		for (int i = 0; i < data.length; ++i) {
 			data[i] += scalar;
@@ -252,7 +252,7 @@ public class ColorArray
 		return this;
 	}
 
-	public ColorArray add(int position,  Color color)
+	public ColorArray add(int position, Color color)
 	{
 		assert position >= 0 && position < data.length >> 2;
 		assert color != null;

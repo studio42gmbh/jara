@@ -25,7 +25,7 @@ package de.s42.jara;
 
 import de.s42.jara.assets.AssetManager;
 import de.s42.jara.enitites.Scene;
-import de.s42.jara.scenes.ChairStill;
+import de.s42.jara.scenes.CarStill;
 
 /**
  *
@@ -42,8 +42,8 @@ public final class Configuration
 	private static final String basePath = "./src/main/resources/"; // relative to working directory
 
 	//ui
-	private final static int DEFAULT_WIDTH = 1024;
-	private final static int DEFAULT_HEIGHT = 768;
+	private final static int DEFAULT_WIDTH = 1920;
+	private final static int DEFAULT_HEIGHT = 1280;
 	private final static int PREFERRED_TILESIZE = 15;
 
 	//save to file
@@ -66,7 +66,7 @@ public final class Configuration
 	private final static int SPATIAL_TREE_SPLIT_NODE_SIZE = 10;
 
 	//scene
-	public final static SceneLoader SCENE_LOADER = new ChairStill();
+	public final static SceneLoader SCENE_LOADER = new CarStill();
 
 	public final static Scene createScene(AssetManager assets)
 	{

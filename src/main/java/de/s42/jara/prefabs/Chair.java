@@ -42,14 +42,13 @@ public final class Chair
 {
 	private Chair()
 	{
-
 	}
 
-	public static void load( Scene scene,  AssetManager assets)
+	public static void load(Scene scene, AssetManager assets)
 	{
 		assert scene != null;
 		assert assets != null;
-		
+
 		Material LeatherBeige = new Material(
 			Color.Black,
 			new Color(0.9, 0.85, 0.7),

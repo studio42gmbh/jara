@@ -37,7 +37,7 @@ public class Plane extends PhysicalEntity
 {
 	public final Vector3 normal;
 
-	public Plane( Vector3 position,  Material material,  Vector3 normal)
+	public Plane(Vector3 position, Material material, Vector3 normal)
 	{
 		super(position, material);
 
@@ -47,7 +47,7 @@ public class Plane extends PhysicalEntity
 	}
 
 	@Override
-	public boolean intersect( RayContext context)
+	public boolean intersect(RayContext context)
 	{
 		assert context != null;
 

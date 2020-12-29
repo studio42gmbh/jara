@@ -43,16 +43,15 @@ public final class CarShelby
 {
 	private CarShelby()
 	{
-
 	}
 
-	public static void load( Scene scene,  AssetManager assets,  Vector3 translation,  Vector3 scale)
+	public static void load(Scene scene, AssetManager assets, Vector3 translation, Vector3 scale)
 	{
 		assert scene != null;
 		assert assets != null;
 		assert translation != null;
 		assert scale != null;
-		
+
 		Material Default = new Material(
 			Color.Black,
 			new Color(0.5, 0.5, 0.5),
@@ -62,7 +61,7 @@ public final class CarShelby
 		);
 
 		/**/
-		/*Material Carroserie = new Material(
+ /*Material Carroserie = new Material(
 			Color.Black,
 			new Color(0.85, 0.0, 0.0),
 			0.7,
@@ -81,7 +80,7 @@ public final class CarShelby
 			Material.IOR_PLASTIC
 		);
 		assets.setMaterial("Carroserie", Carroserie);
-				
+
 		Material Chrome = new Material(
 			Color.Black,
 			new Color(0.95, 0.95, 0.95),
@@ -91,7 +90,7 @@ public final class CarShelby
 		);
 		//Chrome.doubleSided = false;
 		assets.setMaterial("Chrome", Chrome);
-		
+
 		Material Cuire = new Material(
 			Color.Black,
 			new Color(0.9, 0.85, 0.7),
@@ -99,9 +98,9 @@ public final class CarShelby
 			0.3,
 			Material.IOR_PLASTIC
 		);
-		Cuire.doubleSided = false;		
+		Cuire.doubleSided = false;
 		assets.setMaterial("Cuire", Cuire);
-		
+
 		Material Laniere = new Material(
 			Color.Black,
 			new Color(0.5, 0.35, 0.1),
@@ -109,19 +108,19 @@ public final class CarShelby
 			0.3,
 			Material.IOR_PLASTIC
 		);
-		Laniere.doubleSided = false;		
+		Laniere.doubleSided = false;
 		assets.setMaterial("Laniere", Laniere);
-		
+
 		Material Pneu = new Material(
 			Color.Black,
 			new Color(0.15, 0.15, 0.15),
 			0.0,
 			0.4,
 			Material.IOR_RUBBER
-		);		
+		);
 		assets.setMaterial("Pneu", Pneu);
 		assets.setMaterial("Pneu2", Pneu);
-		
+
 		Material Verre = new Material(
 			Color.Black,
 			new Color(0.90, 0.95, 0.98),
@@ -130,7 +129,7 @@ public final class CarShelby
 			Material.IOR_AIR + 0.01
 		);
 		//Verre.doubleSided = false;
-		Verre.transparency = 0.80;		
+		Verre.transparency = 0.80;
 		assets.setMaterial("Verre", Verre);
 
 		Material Lamp = new Material(
@@ -141,9 +140,9 @@ public final class CarShelby
 			Material.IOR_AIR + 0.1
 		);
 		Lamp.doubleSided = false;
-		Lamp.transparency = 0.30;		
+		Lamp.transparency = 0.30;
 		assets.setMaterial("Lamp", Lamp);
-		
+
 		Material Mirror = new Material(
 			Color.Black,
 			new Color(0.95, 0.95, 0.95),
@@ -153,17 +152,17 @@ public final class CarShelby
 		);
 		//Mirror.doubleSided = false;
 		assets.setMaterial("Mirror", Mirror);
-		
+
 		Material Wood = new Material(
 			Color.Black,
 			new Color(0.1, 0.1, 0.1),
 			0.0,
 			0.2,
 			Material.IOR_WOOD
-		);		
-		assets.setMaterial("Wood", Wood);		
+		);
+		assets.setMaterial("Wood", Wood);
 		assets.setMaterial("Leather_volant", Wood);
-		
+
 		assets.setMaterial("Aiguille", Default);
 		assets.setMaterial("Tableau_de_bord", Default);
 		assets.setMaterial("Tapis_sol", Default);
@@ -172,7 +171,7 @@ public final class CarShelby
 		assets.setMaterial("Material", Default);
 		assets.setMaterial("Material.002", Default);
 		assets.setMaterial("Compteur", Default);
-		
+
 		List<Triangle> triangles = ObjLoader.loadTriangles(
 			Path.of(Configuration.getBasePath() + File.separator + "meshes/car-shelby.obj"),
 			assets, translation, scale);

@@ -153,7 +153,7 @@ public class Triangle extends PhysicalEntity
 				tan = n.copy().multiply(tangent.dot(n)).invert().add(tangent).normalize();
 
 				//b = cross(t, n);
-				bit = tan.copy().cross(n);				
+				bit = tan.copy().cross(n);
 			}
 			else {
 				n = faceNormal;

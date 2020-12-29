@@ -91,7 +91,7 @@ public class Camera extends Entity
 
 		context.direction.add(planeRight).add(planeUp).normalize();
 
-		//@todo BS JARA fix dof -> jitter in camera plain -> still tilt shift style -> fix movement relative to lookat not only direction?
+		//@todo JARA fix dof -> jitter in camera plain -> still tilt shift style -> fix movement relative to lookat not only direction?
 		ThreadLocalRandom random = ThreadLocalRandom.current();
 		context.direction.add(context.origin);
 

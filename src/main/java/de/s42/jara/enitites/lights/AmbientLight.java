@@ -31,7 +31,7 @@ import de.s42.jara.core.Color;
  */
 public class AmbientLight extends Light
 {
-	public AmbientLight( Color color)
+	public AmbientLight(Color color)
 	{
 		super(color);
 	}

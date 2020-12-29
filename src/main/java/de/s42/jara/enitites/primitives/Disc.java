@@ -39,7 +39,7 @@ public class Disc extends PhysicalEntity
 	public final double radius;
 	public final double radiusSquared;
 
-	public Disc( Vector3 position,  Material material,  Vector3 normal,  double radius)
+	public Disc(Vector3 position, Material material, Vector3 normal, double radius)
 	{
 		super(position, material);
 
@@ -57,7 +57,7 @@ public class Disc extends PhysicalEntity
 	}
 
 	@Override
-	public boolean intersect( RayContext context)
+	public boolean intersect(RayContext context)
 	{
 		assert context != null;
 

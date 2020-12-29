@@ -41,7 +41,7 @@ public class Texture
 	public final int height;
 	public final ColorArray data;
 
-	public Texture( Image image)
+	public Texture(Image image)
 	{
 		assert image != null;
 
@@ -61,7 +61,7 @@ public class Texture
 		img.flush();
 	}
 
-	public Vector3 retrieveVector3(Vector3 result,  Vector3 position)
+	public Vector3 retrieveVector3(Vector3 result, Vector3 position)
 	{
 		assert result != null;
 		assert position != null;
@@ -72,7 +72,7 @@ public class Texture
 		return data.get(u + v * width, result);
 	}
 
-	public Color retrieveColor(Color result,  Vector3 position)
+	public Color retrieveColor(Color result, Vector3 position)
 	{
 		assert result != null;
 		assert position != null;

@@ -169,13 +169,13 @@ public class ObjLoader extends ObjParserBaseListener
 			ParseTreeWalker walker = new ParseTreeWalker();
 			walker.walk(loader, context);
 
-			log.info("Loaded from " +
-				file.toAbsolutePath().toString() +
-				" with " +
-				loader.faces.size() + " triangles " +
-				loader.positions.size() + " positions " +
-				loader.normals.size() + " normals " +
-				loader.texturePositions.size() + " texturePositions"
+			log.info("Loaded from "
+				+ file.toAbsolutePath().toString()
+				+ " with "
+				+ loader.faces.size() + " triangles "
+				+ loader.positions.size() + " positions "
+				+ loader.normals.size() + " normals "
+				+ loader.texturePositions.size() + " texturePositions"
 			);
 
 			List triangles = new ArrayList();

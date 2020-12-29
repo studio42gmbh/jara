@@ -161,7 +161,7 @@ public final class AssetManager
 		);
 	}
 
-	private Texture loadMaterialTextureAsNormalMap( String materialBasePath,  String textureType)
+	private Texture loadMaterialTextureAsNormalMap(String materialBasePath, String textureType)
 	{
 		assert materialBasePath != null;
 		assert textureType != null;
@@ -176,7 +176,7 @@ public final class AssetManager
 		return normal;
 	}
 
-	private Texture loadMaterialTexture( String materialBasePath,  String textureType)
+	private Texture loadMaterialTexture(String materialBasePath, String textureType)
 	{
 		assert materialBasePath != null;
 		assert textureType != null;
@@ -186,7 +186,7 @@ public final class AssetManager
 			return loadTexture(materialBasePath + File.separator + textureType + ".png");
 		}
 
-		//try load png
+		//try load jpg
 		if (canLoadTexture(materialBasePath + File.separator + textureType + ".jpg")) {
 			return loadTexture(materialBasePath + File.separator + textureType + ".jpg");
 		}
@@ -194,14 +194,14 @@ public final class AssetManager
 		return null;
 	}
 
-	public boolean canLoadTexture( String textureFile)
+	public boolean canLoadTexture(String textureFile)
 	{
 		assert textureFile != null;
 
 		return FileHelper.fileExists(Configuration.getBasePath() + File.separator + textureFile);
 	}
 
-	public Texture loadTextureAsNormalMap( String textureFile)
+	public Texture loadTextureAsNormalMap(String textureFile)
 	{
 		assert textureFile != null;
 
@@ -213,7 +213,7 @@ public final class AssetManager
 		return normal;
 	}
 
-	public Texture loadTexture( String textureFile)
+	public Texture loadTexture(String textureFile)
 	{
 		assert textureFile != null;
 

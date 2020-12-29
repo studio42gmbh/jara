@@ -38,7 +38,7 @@ public class Vertex
 
 	}
 
-	public Vertex( Vector3 position,  Vector3 normal,  Vector3 texture)
+	public Vertex(Vector3 position, Vector3 normal, Vector3 texture)
 	{
 		assert position != null;
 		assert normal != null;
