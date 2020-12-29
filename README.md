@@ -1,3 +1,8 @@
+![GitHub](https://img.shields.io/github/license/studio42gmbh/jara)
+![GitHub top language](https://img.shields.io/github/languages/top/studio42gmbh/jara)
+![GitHub last commit](https://img.shields.io/github/last-commit/studio42gmbh/jara)
+![GitHub issues](https://img.shields.io/github/issues/studio42gmbh/jara)
+
 # JARA
 
 JARA is a educational 100% Java based ray tracer.
