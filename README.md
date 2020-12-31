@@ -43,7 +43,7 @@ Benjamin Schiller
 * Allow dynamic settings and camera in app
 * Provide file based scenes either using default file format or little own format
 * Allow dynamic texture handling for supporting more materials in the same scene
-* Split materials (data) from shaders (alogrithms) to allow easier customization
+* Split materials (data) from shaders (algorithms) to allow easier customization
 * Add tutorials
 
 ## Examples
