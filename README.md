@@ -36,14 +36,11 @@ If you like JARA or have constructive critique dont hesitate to write us directl
 ![Example Car](https://studio42gmbh.github.io/jara/images/jara-carstill-2020-12-30-14-05-21.jpg)
 Car loaded as OBJ exported from Blender
 
+![Example Spheres](https://studio42gmbh.github.io/jara/images/jara-spheres-2020-12-31-11-11-08.jpg)
+Example showing different materials
+
 ![Example House](https://studio42gmbh.github.io/jara/images/jara-meshtest2-2020-07-26-15-28-20.jpg)
 House loaded as OBJ exported from Blender
 
 ![Example Chair](https://studio42gmbh.github.io/jara/images/jara-chairstill-2020-12-27-22-29-50.jpg)
 Chair loaded as OBJ exported from Blender
-
-![Example Spheres](https://studio42gmbh.github.io/jara/images/jara-spheres-2020-12-27-23-58-37.jpg)
-Simple Example just consisting of different spheres and materials
-
-![Example Transparent](https://studio42gmbh.github.io/jara/images/jara-transparent-2020-12-27-22-51-59.jpg)
-Transparent sphere on top of a PBR floor
