@@ -8,27 +8,38 @@
 
 JARA is a educational 100% Java based ray tracer.
 
-If you like JARA or have constructive critique dont hesitate to write us directly on info@s42m.de. We are always happy for qualified feedback!
+The primary focus of this package is to teach and help explore path tracing graphics not performance.
+Altough certain systemic performance measures like spatial partitioning are put in place to teach these concepts.
+
+If you are interested in some fundamentals about path tracing you can download this presentation:
+[Basic Path Tacing PDF](https://github.com/studio42gmbh/jara/blob/main/docs/documents/s42-basics-pathtracing.pdf)
+
+If you like JARA or have constructive critique dont hesitate to write us directly on info@s42m.de. 
+We are always happy for qualified feedback!
+
+"Look up to the stars not down on your feet. Be curious!" _Stephen Hawking 1942 - 2018_
 
 ## Features
 
 * PBR Materials with Textures
 * Transparent Materials
 * Custom Procedural Materials
-* Load OBJ Files
-* Depth of Field
+* Load OBJ Files (using own lightweight [ANTLR](https://github.com/antlr/antlr4) based parser)
+* Camera with depth of field
 * Spatial Optimization (ongoing)
 * Primitives: Sphere, Plane, Triangle, Disc
-* Lights: Ambient, Directional
+* Lighting by either ambient and directional light (creating algorithmic background) or 360 backgrounds
 
 ## Future Plans
 
-* Support for HDR backgrounds
+* Support for .HDR file format for backgrounds
 * Optimize spatial optimization
 * Add configurable denoising
 * Add configurable post FX
 * Allow dynamic settings and camera in app
 * Provide file based scenes either using default file format or little own format
+* Allow dynamic texture handling for supporting more materials in the same scene
+* Split materials (data) from shaders (alogrithms) to allow easier customization
 * Add tutorials
 
 ## Examples
