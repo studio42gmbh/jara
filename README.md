@@ -19,6 +19,9 @@ We are always happy for qualified feedback!
 
 "Look up to the stars not down on your feet. Be curious!" _Stephen Hawking 1942 - 2018_
 
+Have a great day!
+Benjamin Schiller
+
 ## Features
 
 * PBR Materials with Textures
