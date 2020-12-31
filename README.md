@@ -33,7 +33,7 @@ If you like JARA or have constructive critique dont hesitate to write us directl
 
 ## Examples
 
-![Example Car](https://studio42gmbh.github.io/jara/images/jara-meshtest-2020-07-27-14-45-46.jpg)
+![Example Car](https://studio42gmbh.github.io/jara/images/jara-carstill-2020-12-30-14-05-21.jpg)
 Car loaded as OBJ exported from Blender
 
 ![Example House](https://studio42gmbh.github.io/jara/images/jara-meshtest2-2020-07-26-15-28-20.jpg)
