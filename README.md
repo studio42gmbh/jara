@@ -38,6 +38,7 @@ Benjamin Schiller
 
 * Support for .HDR file format for backgrounds
 * Optimize spatial optimization
+* Optimize handling of high intensity differences in rendering by allowing non linear mappings into RGB space
 * Add configurable denoising
 * Add configurable post FX
 * Allow dynamic settings and camera in app
