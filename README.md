@@ -50,13 +50,13 @@ Benjamin Schiller
 ## Examples
 
 ![Example Car](https://studio42gmbh.github.io/jara/images/jara-carstill-2020-12-30-14-05-21.jpg)
-Car loaded as OBJ exported from Blender
+Car loaded as OBJ exported from Blender ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/CarStill.java))
 
 ![Example Spheres](https://studio42gmbh.github.io/jara/images/jara-spheres-2020-12-31-11-11-08.jpg)
-Example showing different materials
+Example showing different materials ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/Spheres.java))
 
 ![Example House](https://studio42gmbh.github.io/jara/images/jara-meshtest2-2020-07-26-15-28-20.jpg)
 House loaded as OBJ exported from Blender
 
 ![Example Chair](https://studio42gmbh.github.io/jara/images/jara-chairstill-2020-12-27-22-29-50.jpg)
-Chair loaded as OBJ exported from Blender
+Chair loaded as OBJ exported from Blender ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/ChairStill.java))
