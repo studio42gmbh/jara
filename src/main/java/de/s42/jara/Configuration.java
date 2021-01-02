@@ -25,7 +25,7 @@ package de.s42.jara;
 
 import de.s42.jara.assets.AssetManager;
 import de.s42.jara.enitites.Scene;
-import de.s42.jara.scenes.CarStill;
+import de.s42.jara.scenes.Spheres;
 
 /**
  *
@@ -42,8 +42,8 @@ public final class Configuration
 	private static final String basePath = "./src/main/resources/"; // relative to working directory
 
 	//ui
-	private final static int DEFAULT_WIDTH = 1920;
-	private final static int DEFAULT_HEIGHT = 1280;
+	private final static int DEFAULT_WIDTH = 1024;
+	private final static int DEFAULT_HEIGHT = 768;
 	private final static int PREFERRED_TILESIZE = 15;
 
 	//save to file
@@ -53,7 +53,7 @@ public final class Configuration
 
 	//raytracer
 	private final static int MAX_PASSES = Integer.MAX_VALUE;
-	private final static int THREADS = 16;
+	private final static int THREADS = 4;
 	private final static int RAY_DEPTH = 6;
 	private final static int[] DIFFUSE_SUBSAMPLES = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 	private final static int[] SPECULAR_SUBSAMPLES = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
@@ -66,7 +66,7 @@ public final class Configuration
 	private final static int SPATIAL_TREE_SPLIT_NODE_SIZE = 10;
 
 	//scene
-	public final static SceneLoader SCENE_LOADER = new CarStill();
+	public final static SceneLoader SCENE_LOADER = new Spheres();
 
 	public final static Scene createScene(AssetManager assets)
 	{

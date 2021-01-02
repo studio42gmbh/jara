@@ -30,7 +30,7 @@ import de.s42.jara.core.Color;
 import de.s42.jara.enitites.Scene;
 import de.s42.jara.core.Vector3;
 import de.s42.jara.enitites.Camera;
-import de.s42.jara.enitites.primitives.Plane;
+import de.s42.jara.enitites.primitives.Disc;
 import de.s42.jara.enitites.primitives.Sphere;
 import de.s42.jara.materials.Material;
 import de.s42.jara.materials.RainbowMaterial;
@@ -50,21 +50,21 @@ public class Spheres implements SceneLoader
 		Scene scene = new Scene("Spheres");
 
 		Texture background = assets.loadBackground(
-			AssetManager.Backgrounds.Sunset,
+			AssetManager.Backgrounds.Studio1,
 			0.9, //rampUpBrightness
 			5.0, //rampUpExponent
-			3.0 //rampUpScale
+			2.0 //rampUpScale
 		);
 		scene.setBackgroundTextureSmoothing(5.0);
 		scene.setBackgroundTextureSmoothingRender(1.0);
 		scene.setBackgroundTexture(background);
 		scene.setShowDirectBackground(true);
-		scene.setBackgroundTextureOffsetX(0.55);
-		scene.setBackgroundColor(new Color(0.05, 0.05, 0.05, 0.0));
+		scene.setBackgroundTextureOffsetX(0.65);
+		scene.setBackgroundColor(new Color(0.05, 0.05, 0.05, 1.0));
 
 		Camera camera = new Camera(
-			new Vector3(16.0, 7.0, 7.0),
-			new Vector3(3.5, 2.0, -10.0),
+			new Vector3(17.0, 7.0, 8.0),
+			new Vector3(3.5, 3.0, -10.0),
 			Vector3.UP,
 			Math.toRadians(75.0),
 			(double) Configuration.getWidth() / (double) Configuration.getHeight()
@@ -83,7 +83,7 @@ public class Spheres implements SceneLoader
 			Color.Black,
 			new Color(0.9, 0.1, 0.1, 1.0),
 			0.5,
-			0.4,
+			0.3,
 			Material.IOR_STEEL
 		);
 
@@ -98,73 +98,116 @@ public class Spheres implements SceneLoader
 		Material mirror = new Material(
 			Color.Black,
 			new Color(0.85, 0.83, 0.75, 1.0),
-			0.9,
-			0.1,
+			1.0,
+			0.0,
 			Material.IOR_STEEL
 		);
 
-		Material glowy = new Material(
-			new Color(1.25, 1.25, 1.23, 1.0),
-			Color.White,
-			0.0,
-			0.0,
-			Material.IOR_AIR
+		Material steel = new Material(
+			Color.Black,
+			new Color(0.85, 0.83, 0.75, 1.0),
+			1.0,
+			0.2,
+			Material.IOR_STEEL
 		);
 
 		Material rainbow = new RainbowMaterial(
-			new Color(0.1, 0.1, 0.1, 1.0),
+			Color.Black,
 			0.0,
 			0.0,
 			Material.IOR_GLASS,
 			0.3, //scale
 			1.0 //amplitude
 		);
+		
+		Material rainbowGlow = new RainbowMaterial(
+			new Color(1.0, 1.0, 1.0, 1.0),
+			0.0,
+			0.0,
+			Material.IOR_GLASS,
+			0.25, //scale
+			1.0 //amplitude
+		);
+		
 
 		Material transparentMaterial = new Material(
 			Color.Black,
-			new Color(0.9, 0.9, 0.1, 1.0),
+			new Color(0.0, 0.0, 0.1, 1.0),
 			0.0,
 			0.0,
-			Material.IOR_PLASTIC
+			Material.IOR_GLASS
 		);
-		transparentMaterial.transparency = 1.0;
+		transparentMaterial.transparency = 0.95;
+		
+		Material transparentRoughMaterial = new Material(
+			Color.Black,
+			new Color(0.0, 0.0, 0.1, 1.0),
+			0.5,
+			0.2,
+			Material.IOR_GLASS
+		);
+		transparentRoughMaterial.transparency = 0.80;
+		
 
 		Material floorMaterial = assets.loadPbrMaterial(AssetManager.Materials.CobbleStone, new Vector3(0.025));
+		
+		Material pbrMaterial = assets.loadPbrMaterial(AssetManager.Materials.GoldOre, new Vector3(1.0));
+		
+		Material pbrMaterial2 = assets.loadPbrMaterial(AssetManager.Materials.TerazzoBrickWork, new Vector3(1.0));
 
-		Sphere sphere1 = new Sphere(new Vector3(-8.0, 0.0, -9.0), rainbow, 6.0);
+		Material pbrMaterial3 = assets.loadPbrMaterial(AssetManager.Materials.CastIronRusted, new Vector3(1.0));
+		
+		Sphere sphere1 = new Sphere(new Vector3(-8.5, -1.0, -9.0), rainbow, 6.0);
 		scene.add(sphere1);
 
 		Sphere sphere2 = new Sphere(new Vector3(4.0, 0.0, 4.0), plasticYellow, 3.0);
-		scene.add(sphere2);
+		//scene.add(sphere2);
 
 		Sphere sphere3 = new Sphere(new Vector3(0.0, 5.0, -10.0), transparentMaterial, 3.0);
 		scene.add(sphere3);
 
-		Sphere sphere4 = new Sphere(new Vector3(6.0, 0.0, -13.0), plasticRed, 5.0);
+		Sphere sphere4 = new Sphere(new Vector3(4.0, -4.0, -14.0), plasticRed, 3.0);
 		scene.add(sphere4);
 
-		Sphere sphere5 = new Sphere(new Vector3(4.0, 0.0, -2.0), glowy, 1.0);
+		Sphere sphere5 = new Sphere(new Vector3(-10.0, -4.0, -70.0), rainbowGlow, 3.0);
 		scene.add(sphere5);
 
-		Sphere sphere6 = new Sphere(new Vector3(-5.0, -8.0, -20.0), mirror, 9.0);
+		Sphere sphere6 = new Sphere(new Vector3(-6.0, -2.0, -22.0), pbrMaterial3, 5.0);
 		scene.add(sphere6);
 
-		Sphere sphere7 = new Sphere(new Vector3(-35.0, 12.0, -150.0), plasticYellow, 29.0);
+		Sphere sphere7 = new Sphere(new Vector3(-35.0, 12.0, -150.0), pbrMaterial2, 19.0);
 		scene.add(sphere7);
 
-		Sphere sphere8 = new Sphere(new Vector3(3.0, 7.0, -9.0), rainbow, 1.0);
+		Sphere sphere8 = new Sphere(new Vector3(-5.0, 8.0, -6.0), rainbow, 1.0);
 		scene.add(sphere8);
 
 		Sphere sphere9 = new Sphere(new Vector3(-8.0, 9.0, -6.0), stone, 3.0);
 		scene.add(sphere9);
-
-		Plane plane = new Plane(
+		
+		Sphere sphere10 = new Sphere(new Vector3(5.0, -2.0, -55.0), pbrMaterial, 5.0);
+		scene.add(sphere10);
+		
+		Sphere sphere11 = new Sphere(new Vector3(9.0, -4.0, -25.0), transparentRoughMaterial, 3.0);
+		scene.add(sphere11);
+		
+		Sphere sphere12 = new Sphere(new Vector3(-50.0, 3.0, -125.0), mirror, 10.0);
+		scene.add(sphere12);		
+				
+		/*Plane plane = new Plane(
 			new Vector3(0.0, -7.0, 0.0),
 			floorMaterial,
 			new Vector3(0.0, 1.0, 0.0)
 		);
 		scene.add(plane);
-
+		*/
+		Disc disc = new Disc(
+			new Vector3(0.0, -7.0, -50.0),
+			floorMaterial,
+			new Vector3(0.0, 1.0, 0.0),
+			150
+		);
+		scene.add(disc);
+		
 		return scene;
 	}
 

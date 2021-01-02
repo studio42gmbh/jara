@@ -48,7 +48,7 @@ public class ChairStill implements SceneLoader
 		Scene scene = new Scene("Chair Still");
 
 		Texture background = assets.loadBackground(
-			AssetManager.Backgrounds.SkyCloudy,
+			AssetManager.Backgrounds.Studio1,
 			0.9, //rampUpBrightness
 			5.0, //rampUpExponent
 			2.0 //rampUpScale
@@ -57,12 +57,12 @@ public class ChairStill implements SceneLoader
 		scene.setBackgroundTextureSmoothingRender(1.0);
 		scene.setBackgroundTexture(background);
 		scene.setShowDirectBackground(true);
-		scene.setBackgroundTextureOffsetX(-0.15);
+		scene.setBackgroundTextureOffsetX(0.36);
 		scene.setBackgroundColor(new Color(0.05, 0.05, 0.05, 0.0));
 
 		Camera camera = new Camera(
 			new Vector3(-30.0, 14.0, 23.0),
-			new Vector3(-1.5, 4.5, 0.0),
+			new Vector3(-0.5, 4.0, 0.0),
 			Vector3.UP,
 			Math.toRadians(30),
 			(double) Configuration.getWidth() / (double) Configuration.getHeight()

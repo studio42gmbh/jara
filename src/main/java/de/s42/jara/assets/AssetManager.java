@@ -46,6 +46,8 @@ public final class AssetManager
 	{
 		CobbleStone("materials/cobblestone", Material.IOR_STONE),
 		GoldOre("materials/goldore", Material.IOR_STONE),
+		IronScratched("materials/ironscratched", Material.IOR_STEEL),
+		CastIronRusted("materials/castironrusted", Material.IOR_STEEL),
 		TerazzoBrickWork("materials/terazzobrickwork", Material.IOR_STONE);
 
 		public final String materialBasePath;
@@ -65,7 +67,6 @@ public final class AssetManager
 		SkyCloudy("backgrounds/sky-cloudy.jpg"),
 		Amsterdam("backgrounds/amsterdam.jpg"),
 		Path("backgrounds/path.png"),
-		Sunny("backgrounds/sunny.jpg"),
 		Sunset("backgrounds/sunset.jpg");
 
 		public final String texturePath;
