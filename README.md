@@ -55,6 +55,9 @@ Car loaded as OBJ exported from Blender ([see source here](https://github.com/st
 ![Example Spheres](https://studio42gmbh.github.io/jara/images/jara-spheres-2020-12-31-11-11-08.jpg)
 Example showing different materials ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/Spheres.java))
 
+![Example Pearls](https://studio42gmbh.github.io/jara/images/jara-pearls-2021-01-10-00-40-18.jpg)
+Example Pearls ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/Pearls.java))
+
 ![Example House](https://studio42gmbh.github.io/jara/images/jara-meshtest2-2020-07-26-15-28-20.jpg)
 House loaded as OBJ exported from Blender
 
