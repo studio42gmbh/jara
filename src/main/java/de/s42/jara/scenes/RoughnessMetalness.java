@@ -56,7 +56,7 @@ public class RoughnessMetalness implements SceneLoader
 		Scene scene = new Scene("Material Test");
 
 		Texture background = assets.loadBackground(
-			AssetManager.Backgrounds.Path,
+			AssetManager.Backgrounds.Sunset,
 			0.9, //rampUpBrightness
 			5.0, //rampUpExponent
 			10.0 //rampUpScale

@@ -75,16 +75,4 @@ public class CarStill implements SceneLoader
 
 		return scene;
 	}
-
-	@Override
-	public int getPreferredWidth()
-	{
-		return Configuration.getDefaultWidth();
-	}
-
-	@Override
-	public int getPreferredHeight()
-	{
-		return Configuration.getDefaultHeight();
-	}
 }

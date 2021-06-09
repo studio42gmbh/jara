@@ -34,7 +34,13 @@ public interface SceneLoader
 {
 	public Scene loadScene(AssetManager assets);
 
-	public int getPreferredWidth();
+	default public int getPreferredWidth()
+	{
+		return Configuration.getDefaultWidth();
+	}
 
-	public int getPreferredHeight();
+	default public int getPreferredHeight()
+	{
+		return Configuration.getDefaultHeight();
+	}
 }
