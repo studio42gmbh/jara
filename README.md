@@ -63,3 +63,8 @@ House loaded as OBJ exported from Blender
 
 ![Example Chair](https://studio42gmbh.github.io/jara/images/jara-chairstill-2020-12-27-22-29-50.jpg)
 Chair loaded as OBJ exported from Blender ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/ChairStill.java))
+
+![Materialdemo](https://studio42gmbh.github.io/jara/images/jara-roughnessmetalness-2021-01-10-19-02-45.jpg)
+Metalness (Bottom 0.0 - Top 1.0) and Roughness (Left 0.0 - Right 1.0) ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/RoughnessMetalness.java))
+
+
