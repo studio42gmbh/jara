@@ -4,8 +4,8 @@
 		<Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
 			<PatternLayout charset="UTF-8" disableAnsi="false" pattern="%style{%d{HH:mm:ss.SSS} [%-20.20thread]}{bright,black} %highlight{[%-5level]} %msg%n at %c.%M(%F:%L)%n"/>
 		</Console>
-		<File name="FileAppender" fileName="./log/jara-${date:yyyyMMdd}.log" immediateFlush="false" append="true">
-			<PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+		<File name="FileAppender" fileName="./log/jara-test-${date:yyyyMMdd}.log" immediateFlush="false" append="true">
+			<PatternLayout charset="UTF-8" pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
 		</File>
 	</Appenders>
 	<Loggers>
