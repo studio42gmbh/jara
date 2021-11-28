@@ -25,7 +25,7 @@ package de.s42.jara;
 
 import de.s42.jara.assets.AssetManager;
 import de.s42.jara.enitites.Scene;
-import de.s42.jara.scenes.Pearls;
+import de.s42.jara.scenes.*;
 
 /**
  *
@@ -42,8 +42,8 @@ public final class Configuration
 	private static final String basePath = "./src/main/resources/"; // relative to working directory
 
 	//ui
-	private final static int DEFAULT_WIDTH = 1920;
-	private final static int DEFAULT_HEIGHT = 1280;
+	private final static int DEFAULT_WIDTH = 1280;
+	private final static int DEFAULT_HEIGHT = 800;
 	private final static int PREFERRED_TILESIZE = 15;
 
 	//save to file
@@ -54,11 +54,11 @@ public final class Configuration
 	//raytracer
 	private final static int MAX_PASSES = Integer.MAX_VALUE;
 	private final static int THREADS = 4;
-	private final static int RAY_DEPTH = 6;
+	private final static int RAY_DEPTH = 8;
 	private final static int[] DIFFUSE_SUBSAMPLES = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 	private final static int[] SPECULAR_SUBSAMPLES = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 	private final static int[] REFRACTION_SUBSAMPLES = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-	private final static double CAMERA_DOF_SIZE = 0.0;
+	private final static double CAMERA_DOF_SIZE = 0.1;
 	private final static boolean CAMERA_AUTO_FOCUS = true;
 
 	//optimizations
