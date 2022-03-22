@@ -53,7 +53,7 @@ import org.apache.logging.log4j.Logger;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public class App extends JFrame
 {

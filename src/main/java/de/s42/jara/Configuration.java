@@ -29,7 +29,7 @@ import de.s42.jara.scenes.*;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public final class Configuration
 {

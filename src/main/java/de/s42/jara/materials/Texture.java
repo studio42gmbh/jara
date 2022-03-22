@@ -33,7 +33,7 @@ import java.awt.image.DataBufferInt;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public class Texture
 {

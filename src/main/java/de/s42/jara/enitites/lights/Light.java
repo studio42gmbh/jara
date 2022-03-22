@@ -29,7 +29,7 @@ import de.s42.jara.enitites.Entity;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public abstract class Light extends Entity
 {

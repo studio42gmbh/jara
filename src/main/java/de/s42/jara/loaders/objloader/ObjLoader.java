@@ -49,7 +49,7 @@ import org.apache.logging.log4j.Logger;
 /**
  * https://en.wikipedia.org/wiki/Wavefront_.obj_file
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public class ObjLoader extends ObjParserBaseListener
 {

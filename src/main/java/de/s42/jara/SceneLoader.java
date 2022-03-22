@@ -28,7 +28,7 @@ import de.s42.jara.enitites.Scene;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public interface SceneLoader
 {

@@ -36,7 +36,7 @@ import java.util.List;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public final class Chair
 {

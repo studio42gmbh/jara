@@ -27,7 +27,7 @@ import de.s42.jara.core.Color;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public class AmbientLight extends Light
 {

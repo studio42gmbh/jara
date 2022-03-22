@@ -31,7 +31,7 @@ import de.s42.jara.materials.Material;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public class RayContext
 {

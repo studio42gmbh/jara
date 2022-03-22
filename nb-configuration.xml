@@ -13,6 +13,26 @@ You can copy and paste the single properties, into the pom.xml file and the IDE 
 That way multiple projects can share the same settings (useful for formatting rules for example).
 Any value defined here will override the pom.xml file value but is only applicable to the current project.
 -->
-        <netbeans.compile.on.save>all</netbeans.compile.on.save>
+        <netbeans.hint.licensePath>${project.basedir}/licenseheader.txt</netbeans.hint.licensePath>
+        <org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.continuationIndentSize>4</org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.continuationIndentSize>
+        <org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.enable-indent>true</org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.enable-indent>
+        <org-netbeans-modules-editor-indent.text.html.CodeStyle.project.enable-indent>true</org-netbeans-modules-editor-indent.text.html.CodeStyle.project.enable-indent>
+        <org-netbeans-modules-editor-indent.CodeStyle.project.text-line-wrap>none</org-netbeans-modules-editor-indent.CodeStyle.project.text-line-wrap>
+        <org-netbeans-modules-editor-indent.CodeStyle.project.indent-shift-width>4</org-netbeans-modules-editor-indent.CodeStyle.project.indent-shift-width>
+        <org-netbeans-modules-editor-indent.CodeStyle.project.spaces-per-tab>4</org-netbeans-modules-editor-indent.CodeStyle.project.spaces-per-tab>
+        <org-netbeans-modules-editor-indent.CodeStyle.project.tab-size>4</org-netbeans-modules-editor-indent.CodeStyle.project.tab-size>
+        <org-netbeans-modules-editor-indent.CodeStyle.project.text-limit-width>120</org-netbeans-modules-editor-indent.CodeStyle.project.text-limit-width>
+        <org-netbeans-modules-editor-indent.CodeStyle.project.expand-tabs>false</org-netbeans-modules-editor-indent.CodeStyle.project.expand-tabs>
+        <org-netbeans-modules-editor-indent.CodeStyle.usedProfile>project</org-netbeans-modules-editor-indent.CodeStyle.usedProfile>
+        <org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.moduleDeclBracePlacement>NEW_LINE</org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.moduleDeclBracePlacement>
+        <org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.methodDeclBracePlacement>NEW_LINE</org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.methodDeclBracePlacement>
+        <org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.classDeclBracePlacement>NEW_LINE</org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.classDeclBracePlacement>
+        <org-netbeans-modules-editor-indent.text.x-json.CodeStyle.project.continuationIndentSize>4</org-netbeans-modules-editor-indent.text.x-json.CodeStyle.project.continuationIndentSize>
+        <org-netbeans-modules-editor-indent.text.x-json.CodeStyle.project.enable-indent>true</org-netbeans-modules-editor-indent.text.x-json.CodeStyle.project.enable-indent>
+        <org-netbeans-modules-editor-indent.text.x-yaml.CodeStyle.project.enable-indent>true</org-netbeans-modules-editor-indent.text.x-yaml.CodeStyle.project.enable-indent>
+        <org-netbeans-modules-editor-indent.text.javascript.CodeStyle.project.continuationIndentSize>4</org-netbeans-modules-editor-indent.text.javascript.CodeStyle.project.continuationIndentSize>
+        <org-netbeans-modules-editor-indent.text.javascript.CodeStyle.project.enable-indent>true</org-netbeans-modules-editor-indent.text.javascript.CodeStyle.project.enable-indent>
+        <org-netbeans-modules-editor-indent.text.xml.CodeStyle.project.enable-indent>true</org-netbeans-modules-editor-indent.text.xml.CodeStyle.project.enable-indent>
+        <org-netbeans-modules-editor-indent.text.x-json.CodeStyle.project.spaceBeforeColon>true</org-netbeans-modules-editor-indent.text.x-json.CodeStyle.project.spaceBeforeColon>
     </properties>
 </project-shared-configuration>

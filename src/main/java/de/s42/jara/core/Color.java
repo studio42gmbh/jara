@@ -27,7 +27,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public class Color
 {

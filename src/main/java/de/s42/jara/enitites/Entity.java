@@ -27,7 +27,7 @@ import de.s42.jara.core.Vector3;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public abstract class Entity
 {

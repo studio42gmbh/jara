@@ -38,7 +38,7 @@ import java.util.Map;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public final class AssetManager
 {

@@ -27,7 +27,7 @@ import static de.s42.jara.core.Color.ONE_DIVIDED_BY_255;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public class ColorArray
 {

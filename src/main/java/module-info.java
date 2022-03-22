@@ -24,7 +24,7 @@
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 module de.sft.jara
 {

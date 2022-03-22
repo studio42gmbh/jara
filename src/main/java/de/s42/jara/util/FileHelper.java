@@ -43,7 +43,7 @@ import javax.swing.filechooser.FileSystemView;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public final class FileHelper
 {

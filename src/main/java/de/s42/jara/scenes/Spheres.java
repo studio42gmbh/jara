@@ -38,7 +38,7 @@ import de.s42.jara.materials.Texture;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public class Spheres implements SceneLoader
 {

@@ -31,7 +31,7 @@ import java.util.List;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public class SpatialNode
 {

@@ -39,7 +39,7 @@ import de.s42.jara.materials.RainbowMaterial;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public class Pearls implements SceneLoader
 {

@@ -28,7 +28,7 @@ import de.s42.jara.tracer.RayContext;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public class RainbowMaterial extends Material
 {

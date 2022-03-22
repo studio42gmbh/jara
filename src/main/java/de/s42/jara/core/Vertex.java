@@ -25,7 +25,7 @@ package de.s42.jara.core;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public class Vertex
 {

@@ -36,7 +36,7 @@ import de.s42.jara.prefabs.DiscFloor;
 
 /**
  *
- * @author Benjamin.Schiller
+ * @author Benjamin Schiller
  */
 public class CarStill implements SceneLoader
 {
