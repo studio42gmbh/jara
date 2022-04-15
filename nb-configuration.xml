@@ -34,5 +34,6 @@ Any value defined here will override the pom.xml file value but is only applicab
         <org-netbeans-modules-editor-indent.text.javascript.CodeStyle.project.enable-indent>true</org-netbeans-modules-editor-indent.text.javascript.CodeStyle.project.enable-indent>
         <org-netbeans-modules-editor-indent.text.xml.CodeStyle.project.enable-indent>true</org-netbeans-modules-editor-indent.text.xml.CodeStyle.project.enable-indent>
         <org-netbeans-modules-editor-indent.text.x-json.CodeStyle.project.spaceBeforeColon>true</org-netbeans-modules-editor-indent.text.x-json.CodeStyle.project.spaceBeforeColon>
+        <netbeans.compile.on.save>none</netbeans.compile.on.save>
     </properties>
 </project-shared-configuration>
