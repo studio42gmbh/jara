@@ -1,9 +1,10 @@
 <#if licenseFirst??>
+// <editor-fold desc="The MIT License" defaultstate="collapsed">
 ${licenseFirst}
 </#if>
 ${licensePrefix}The MIT License
 ${licensePrefix}
-${licensePrefix}Copyright ${date?date?string("yyyy")} Studio 42 GmbH (https://www.s42m.de).
+${licensePrefix}Copyright ${date?date?string("yyyy")} Studio 42 GmbH ( https://www.s42m.de ).
 ${licensePrefix}
 ${licensePrefix}Permission is hereby granted, free of charge, to any person obtaining a copy
 ${licensePrefix}of this software and associated documentation files (the "Software"), to deal
@@ -24,4 +25,5 @@ ${licensePrefix}OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DE
 ${licensePrefix}THE SOFTWARE.
 <#if licenseLast??>
 ${licenseLast}
+//</editor-fold>
 </#if>
