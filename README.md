@@ -17,11 +17,12 @@ If you are interested in some fundamentals about path tracing you can download t
 If you like JARA or have constructive critique dont hesitate to write us directly on info@s42m.de. 
 We are always happy for qualified feedback!
 
-"Look up to the stars not down on your feet. Be curious!" _Stephen Hawking 1942 - 2018_
-
 Have a great day!
 
 Benjamin Schiller
+
+> "Look up to the stars not down on your feet. Be curious!" _Stephen Hawking 1942 - 2018_
+
 
 ## Features
 
@@ -33,6 +34,7 @@ Benjamin Schiller
 * Spatial Optimization (ongoing)
 * Primitives: Sphere, Plane, Triangle, Disc
 * Lighting by either ambient and directional light (creating algorithmic background) or 360 backgrounds
+
 
 ## Future Plans
 
@@ -46,6 +48,7 @@ Benjamin Schiller
 * Allow dynamic texture handling for supporting more materials in the same scene
 * Split materials (data) from shaders (algorithms) to allow easier customization
 * Add tutorials
+
 
 ## Examples
 
