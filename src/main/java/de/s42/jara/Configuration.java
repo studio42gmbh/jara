@@ -44,7 +44,8 @@ public final class Configuration
 	private static final String basePath = "./src/main/resources/"; // relative to working directory
 
 	// UI
-	private final static int DEFAULT_WIDTH = 1920 * 2;
+	// Highest tested resolution was 8K  (1920 * 4 x 1200 * 4)
+	private final static int DEFAULT_WIDTH = 1920 * 2; 
 	private final static int DEFAULT_HEIGHT = 1200 * 2;
 	private final static int PREFERRED_TILESIZE = 15;
 
