@@ -88,8 +88,6 @@ public class Transparent implements SceneLoader
 		);
 		sphereMaterial.transparency = 1.0;
 
-		Material floorMaterial = assets.loadPbrMaterial(FLOOR_MATERIAL, new Vector3(0.25));
-
 		Sphere sphere1 = new Sphere(
 			new Vector3(0.0, 0.0, 0.0),
 			sphereMaterial,
@@ -97,6 +95,8 @@ public class Transparent implements SceneLoader
 		);
 		scene.add(sphere1);
 
+		Material floorMaterial = assets.loadPbrMaterial(FLOOR_MATERIAL, new Vector3(0.25));
+		
 		Plane plane = new Plane(
 			new Vector3(0.0, -0.70, 0.0),
 			floorMaterial,

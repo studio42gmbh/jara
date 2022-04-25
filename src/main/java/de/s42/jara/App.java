@@ -88,11 +88,11 @@ public class App extends JFrame
 				}
 			}
 
-			paintRendering(g2d);
+			paintRendering(g2d, true);
 		}
 	}
 
-	protected void paintRendering(Graphics2D g2D)
+	protected void paintRendering(Graphics2D g2D, boolean scaleToWindow)
 	{
 		assert g2D != null;
 
@@ -102,7 +102,13 @@ public class App extends JFrame
 
 		//blit the rendering
 		g2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
-		g2D.drawImage(raytracer.buffer.getBuffer(), 0, 0, this);
+		
+		if (scaleToWindow) {
+			g2D.drawImage(raytracer.buffer.getBuffer(), 0, 0, this.getWidth(), this.getHeight(), this);
+		}
+		else {
+			g2D.drawImage(raytracer.buffer.getBuffer(), 0, 0, this);
+		}
 
 		//add version and state info
 		g2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
@@ -179,10 +185,12 @@ public class App extends JFrame
 				else if ((e.getKeyCode() == KeyEvent.VK_MINUS)) {
 					raytracer.setHdrScale(raytracer.getHdrScale() - 0.1);
 					update();
+					log.info("Changed HDR Scale to " + raytracer.getHdrScale());
 				}
 				else if ((e.getKeyCode() == KeyEvent.VK_PLUS)) {
 					raytracer.setHdrScale(raytracer.getHdrScale() + 0.1);
 					update();
+					log.info("Changed HDR Scale to " + raytracer.getHdrScale());
 				}
 				else if ((e.getKeyCode() == KeyEvent.VK_S)) {
 					log.info("Image will get saved after finishing this pass ...");
@@ -235,7 +243,7 @@ public class App extends JFrame
 					BufferedImage.TYPE_INT_ARGB);
 
 				Graphics2D g2D = (Graphics2D) saveImage.getGraphics();
-				paintRendering(g2D);
+				paintRendering(g2D, false);
 				g2D.dispose();
 
 				Path outputFilePng = FileHelper.getUserHome().resolve("jara-" + Configuration.getSceneLoader().getClass().getSimpleName().toLowerCase() + "-" + DATETIME_FORMAT.format(new Date()) + ".png");
@@ -256,7 +264,7 @@ public class App extends JFrame
 					BufferedImage.TYPE_INT_RGB);
 
 				Graphics2D g2D = (Graphics2D) saveImage.getGraphics();
-				paintRendering(g2D);
+				paintRendering(g2D, false);
 				g2D.dispose();
 
 				Path outputFileJpg = FileHelper.getUserHome().resolve("jara-" + Configuration.getSceneLoader().getClass().getSimpleName().toLowerCase() + "-" + DATETIME_FORMAT.format(new Date()) + ".jpg");
