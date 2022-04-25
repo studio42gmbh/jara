@@ -26,6 +26,7 @@ package de.s42.jara;
 import de.s42.jara.assets.AssetManager;
 import de.s42.jara.enitites.Scene;
 import de.s42.jara.scenes.*;
+import java.awt.event.KeyEvent;
 
 /**
  *
@@ -39,20 +40,20 @@ public final class Configuration
 		JPG, PNG, BOTH
 	}
 
-	//environment
+	// Environment
 	private static final String basePath = "./src/main/resources/"; // relative to working directory
 
-	//ui
+	// UI
 	private final static int DEFAULT_WIDTH = 1920 * 2;
 	private final static int DEFAULT_HEIGHT = 1200 * 2;
 	private final static int PREFERRED_TILESIZE = 15;
 
-	//save to file
+	// Save to file
 	private final static ImageSaveFormat SAVE_FORMAT = ImageSaveFormat.BOTH;
 	private final static float JPG_QUALITY = 1.0f;
 	private final static boolean SHOW_FOOTER_IN_FILES = true;
 
-	//raytracer
+	// Raytracer
 	private final static int MAX_PASSES = Integer.MAX_VALUE;
 	private final static int THREADS = 8;
 	private final static int RAY_DEPTH = 8;
@@ -62,12 +63,18 @@ public final class Configuration
 	private final static double CAMERA_DOF_SIZE = 0.05;
 	private final static boolean CAMERA_AUTO_FOCUS = true;
 
-	//optimizations
+	// Optimizations
 	private final static int SPATIAL_TREE_MAX_DEPTH = 15;
 	private final static int SPATIAL_TREE_SPLIT_NODE_SIZE = 10;
 
-	//scene
+	// Scene
 	public final static SceneLoader SCENE_LOADER = new Spheres();
+
+	// Keys
+	public final static int KEY_EXIT = KeyEvent.VK_ESCAPE;
+	public final static int KEY_EXPOSURE_PLUS = KeyEvent.VK_PLUS;
+	public final static int KEY_EXPOSURE_MINUS = KeyEvent.VK_MINUS;
+	public final static int KEY_SAVE_IMAGE = KeyEvent.VK_S;
 
 	public final static Scene createScene(AssetManager assets)
 	{
@@ -76,7 +83,7 @@ public final class Configuration
 
 	public final static int getTilesize()
 	{
-		//calulcate next bigger tilesize than preferred which is a divisor of width and height
+		// Calculcate next bigger tilesize than preferred which is a divisor of width and height
 		int width = getWidth();
 		int height = getHeight();
 		int maxDivisor = (int) Math.max(width, height);
@@ -86,7 +93,7 @@ public final class Configuration
 			}
 		}
 
-		//worst case -> fall back to preferred tilesize
+		// Worst case -> fall back to preferred tilesize
 		return PREFERRED_TILESIZE;
 	}
 
@@ -187,5 +194,6 @@ public final class Configuration
 
 	private Configuration()
 	{
+		// Never instantiated
 	}
 }

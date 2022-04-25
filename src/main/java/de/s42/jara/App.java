@@ -104,7 +104,7 @@ public class App extends JFrame
 		g2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
 		
 		if (scaleToWindow) {
-			g2D.drawImage(raytracer.buffer.getBuffer(), 0, 0, this.getWidth(), this.getHeight(), this);
+			g2D.drawImage(raytracer.buffer.getBuffer(), 0, 0, this.getWidth(), this.getHeight() - 15, this);
 		}
 		else {
 			g2D.drawImage(raytracer.buffer.getBuffer(), 0, 0, this);
@@ -178,21 +178,21 @@ public class App extends JFrame
 			public void keyPressed(KeyEvent e)
 			{
 				//exit on escape
-				if (isRendering() && (e.getKeyCode() == KeyEvent.VK_ESCAPE)) {
+				if (isRendering() && (e.getKeyCode() == Configuration.KEY_EXIT)) {
 					setRendering(false);
 					log.info("Stopping Rendering");
 				}
-				else if ((e.getKeyCode() == KeyEvent.VK_MINUS)) {
+				else if ((e.getKeyCode() == Configuration.KEY_EXPOSURE_MINUS)) {
 					raytracer.setHdrScale(raytracer.getHdrScale() - 0.1);
 					update();
 					log.info("Changed HDR Scale to " + raytracer.getHdrScale());
 				}
-				else if ((e.getKeyCode() == KeyEvent.VK_PLUS)) {
+				else if ((e.getKeyCode() == Configuration.KEY_EXPOSURE_PLUS)) {
 					raytracer.setHdrScale(raytracer.getHdrScale() + 0.1);
 					update();
 					log.info("Changed HDR Scale to " + raytracer.getHdrScale());
 				}
-				else if ((e.getKeyCode() == KeyEvent.VK_S)) {
+				else if ((e.getKeyCode() == Configuration.KEY_SAVE_IMAGE)) {
 					log.info("Image will get saved after finishing this pass ...");
 					saveRenderingAsImage();
 				}
