@@ -52,7 +52,7 @@ Benjamin Schiller
 
 ## Examples
 
-![Example Car](https://studio42gmbh.github.io/jara/images/jara-carstill-2020-12-30-14-05-21.jpg)
+![Example Car](https://github.com/studio42gmbh/jara/blob/main/docs/images/jara-shelby-cobra-2022-small.png)
 Car loaded as OBJ exported from Blender ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/CarStill.java))
 
 ![Example Spheres](https://studio42gmbh.github.io/jara/images/jara-spheres-2020-12-31-11-11-08.jpg)
