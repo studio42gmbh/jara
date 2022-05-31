@@ -59,7 +59,7 @@ public class ColorArray
 	public void setARGB8(int startPosition, int length, int[] argbArray)
 	{
 		assert startPosition >= 0 && startPosition < data.length >> 2;
-		assert startPosition + length >= 0 && startPosition + length < data.length >> 2;
+		assert startPosition + length >= 0 && startPosition + length <= data.length >> 2;
 		assert argbArray != null;
 
 		int startPos = startPosition << 2;

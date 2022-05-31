@@ -359,8 +359,6 @@ public class Vector3
 	{
 		double l = length();
 
-		assert (l > JaraMath.ONE_MINUS_EPSILON && l < JaraMath.ONE_PLUS_EPSILON);
-
 		double il = 1.0 / l;
 
 		x *= il;

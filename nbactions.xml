@@ -10,7 +10,7 @@
 			<goal>org.codehaus.mojo:exec-maven-plugin:1.5.0:exec</goal>
 		</goals>
 		<properties>
-			<exec.args>-Xms1000m  -Xmx14000m  -splash:src/main/resources/images/jara-splash.png -classpath %classpath de.s42.jara.Jara</exec.args>
+			<exec.args>-Xms1000m  -Xmx14000m  -splash:src/main/resources/images/jara-splash-2022.png -classpath %classpath de.s42.jara.Jara</exec.args>
 			<exec.executable>java</exec.executable>
 		</properties>
 	</action>
@@ -24,7 +24,7 @@
 			<goal>org.codehaus.mojo:exec-maven-plugin:1.5.0:exec</goal>
 		</goals>
 		<properties>
-			<exec.args>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address} -Xms1000m  -Xmx14000m  -splash:src/main/resources/images/jara-splash.png -classpath %classpath de.s42.jara.Jara</exec.args>
+			<exec.args>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address} -Xms1000m  -Xmx14000m  -splash:src/main/resources/images/jara-splash-2022.png -classpath %classpath de.s42.jara.Jara</exec.args>
 			<exec.executable>java</exec.executable>
 			<jpda.listen>true</jpda.listen>
 		</properties>
@@ -39,7 +39,7 @@
 			<goal>org.codehaus.mojo:exec-maven-plugin:1.5.0:exec</goal>
 		</goals>
 		<properties>
-			<exec.args>-Xms1000m  -Xmx14000m  -splash:src/main/resources/images/jara-splash.png -classpath %classpath de.s42.jara.Jara</exec.args>
+			<exec.args>-Xms1000m  -Xmx14000m  -splash:src/main/resources/images/jara-splash-2022.png -classpath %classpath de.s42.jara.Jara</exec.args>
 			<exec.executable>java</exec.executable>
 		</properties>
 	</action>

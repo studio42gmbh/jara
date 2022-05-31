@@ -74,11 +74,13 @@ public final class CarShelby
 		/**/
 		Material Carroserie = new Material(
 			Color.Black,
-			new Color(53.0 / 256.0, 83.0 / 256.0, 10.0 / 256.0),
-			0.0,
-			0.4,
-			Material.IOR_PLASTIC
+			new Color(75.0 / 256.0, 83.0 / 256.0, 32.0 / 256.0),
+			0.7,
+			0.2,
+			Material.IOR_STEEL
 		);
+		Carroserie.clearCoatRoughness = 0.1;
+		Carroserie.clearCoat = 0.5;
 		assets.setMaterial("Carroserie", Carroserie);
 
 		Material Chrome = new Material(

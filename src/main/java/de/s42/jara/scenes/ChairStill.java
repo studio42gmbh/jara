@@ -32,7 +32,6 @@ import de.s42.jara.core.Vector3;
 import de.s42.jara.enitites.Camera;
 import de.s42.jara.materials.Texture;
 import de.s42.jara.prefabs.Chair;
-import de.s42.jara.prefabs.DiscFloor;
 
 /**
  *
@@ -40,6 +39,7 @@ import de.s42.jara.prefabs.DiscFloor;
  */
 public class ChairStill implements SceneLoader
 {
+
 	@Override
 	public Scene loadScene(AssetManager assets)
 	{
@@ -48,12 +48,12 @@ public class ChairStill implements SceneLoader
 		Scene scene = new Scene("Chair Still");
 
 		Texture background = assets.loadBackground(
-			AssetManager.Backgrounds.Studio1,
+			AssetManager.Backgrounds.Sunset,
 			0.9, //rampUpBrightness
 			5.0, //rampUpExponent
 			2.0 //rampUpScale
 		);
-		scene.setBackgroundTextureSmoothing(5.0);
+		scene.setBackgroundTextureSmoothing(100.0);
 		scene.setBackgroundTextureSmoothingRender(1.0);
 		scene.setBackgroundTexture(background);
 		scene.setShowDirectBackground(true);
@@ -70,8 +70,6 @@ public class ChairStill implements SceneLoader
 		scene.setCamera(camera);
 
 		Chair.load(scene, assets);
-
-		DiscFloor.load(scene, assets, new Vector3(0.0, 0.0, 0.0), new Vector3(1.5));
 
 		return scene;
 	}

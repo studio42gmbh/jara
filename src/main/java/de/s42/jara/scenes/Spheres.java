@@ -49,18 +49,18 @@ public class Spheres implements SceneLoader
 
 		Scene scene = new Scene("Spheres");
 
-		Texture background = assets.loadBackground(
+		/*Texture background = assets.loadBackground(
 			AssetManager.Backgrounds.Studio1,
 			0.9, //rampUpBrightness
 			5.0, //rampUpExponent
 			2.0 //rampUpScale
-		);
-		scene.setBackgroundTextureSmoothing(5.0);
-		scene.setBackgroundTextureSmoothingRender(1.0);
-		scene.setBackgroundTexture(background);
-		scene.setShowDirectBackground(true);
-		scene.setBackgroundTextureOffsetX(0.65);
-		scene.setBackgroundColor(new Color(0.05, 0.05, 0.05, 1.0));
+		);*/
+		//scene.setBackgroundTextureSmoothing(5.0);
+		//scene.setBackgroundTextureSmoothingRender(1.0);
+		//scene.setBackgroundTexture(background);
+		//scene.setShowDirectBackground(true);
+		//scene.setBackgroundTextureOffsetX(0.65);
+		scene.setBackgroundColor(new Color(0.12 * 0.3, 0.11 * 0.3, 0.13 * 0.3, 1.0));
 
 		Camera camera = new Camera(
 			new Vector3(17.0, 7.0, 8.0),
@@ -125,7 +125,7 @@ public class Spheres implements SceneLoader
 			0.0,
 			0.0,
 			Material.IOR_GLASS,
-			0.25, //scale
+			0.06, //scale
 			1.0 //amplitude
 		);
 		
@@ -169,7 +169,7 @@ public class Spheres implements SceneLoader
 		Sphere sphere4 = new Sphere(new Vector3(4.0, -4.0, -14.0), plasticRed, 3.0);
 		scene.add(sphere4);
 
-		Sphere sphere5 = new Sphere(new Vector3(-10.0, -4.0, -70.0), rainbowGlow, 3.0);
+		Sphere sphere5 = new Sphere(new Vector3(-10.0, 60.0, -70.0), rainbowGlow, 30.0);
 		scene.add(sphere5);
 
 		Sphere sphere6 = new Sphere(new Vector3(-6.0, -2.0, -22.0), pbrMaterial3, 5.0);

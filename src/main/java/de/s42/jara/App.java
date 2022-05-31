@@ -103,17 +103,28 @@ public class App extends JFrame
 		//blit the rendering
 		g2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
 		
+		int w;
+		int h;
+		
 		if (scaleToWindow) {
-			g2D.drawImage(raytracer.buffer.getBuffer(), 0, 0, this.getWidth(), this.getHeight() - 15, this);
+			
+			w = getContentPane().getWidth();
+			h = getContentPane().getHeight() - 15;
+			
+			g2D.drawImage(raytracer.buffer.getBuffer(), 0, 0, w, h, this);
 		}
 		else {
+			
+			w = Configuration.getWidth();
+			h = Configuration.getHeight();
+			
 			g2D.drawImage(raytracer.buffer.getBuffer(), 0, 0, this);
 		}
 
 		//add version and state info
 		g2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g2D.setColor(Color.black);
-		g2D.fillRect(0, Configuration.getHeight(), Configuration.getWidth(), 15);
+		g2D.fillRect(0, h, w, 15);
 
 		g2D.setColor(Color.lightGray);
 
@@ -123,7 +134,7 @@ public class App extends JFrame
 			+ "  HDRScale: " + NUMBER_FORMAT.format(raytracer.getHdrScale())
 			+ "  Duration: " + (int) ((double) (System.nanoTime() - startTime) * 0.000000001) + " sec."
 			+ "  Pass: " + (int) raytracer.passesRendered;
-		g2D.drawString(infoString, 5, Configuration.getHeight() + 12);
+		g2D.drawString(infoString, 5, h + 12);
 
 		//version
 		//Rectangle2D bounds = g2D.getFontMetrics().getStringBounds(Jara.VERSION, g2D);

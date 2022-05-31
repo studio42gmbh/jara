@@ -69,9 +69,9 @@ public final class Chair
 		SteelRough.doubleSided = false;
 		assets.setMaterial("SteelRough", SteelRough);
 
-		List<Triangle> discFloor = ObjLoader.loadTriangles(
+		List<Triangle> chair = ObjLoader.loadTriangles(
 			Path.of(Configuration.getBasePath() + File.separator + "meshes/chair.obj"),
 			assets);
-		scene.add(discFloor);
+		scene.add(chair);
 	}
 }
