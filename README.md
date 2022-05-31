@@ -55,19 +55,17 @@ Benjamin Schiller
 ![Example Car](https://github.com/studio42gmbh/jara/blob/main/docs/images/jara-shelby-cobra-2022-small.png)
 Car loaded as OBJ exported from Blender ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/CarStill.java))
 
+![Example House](https://github.com/studio42gmbh/jara/blob/main/docs/images/jara-housestill-2022-05-31-10-55-02-pp-1280.png)
+House loaded as OBJ exported from Blender
+
 ![Example Spheres](https://studio42gmbh.github.io/jara/images/jara-spheres-2020-12-31-11-11-08.jpg)
 Example showing different materials ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/Spheres.java))
-
-![Example Pearls](https://studio42gmbh.github.io/jara/images/jara-pearls-2021-01-10-00-40-18.jpg)
-Example Pearls ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/Pearls.java))
-
-![Example House](https://studio42gmbh.github.io/jara/images/jara-meshtest2-2020-07-26-15-28-20.jpg)
-House loaded as OBJ exported from Blender
 
 ![Example Chair](https://studio42gmbh.github.io/jara/images/jara-chairstill-2020-12-27-22-29-50.jpg)
 Chair loaded as OBJ exported from Blender ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/ChairStill.java))
 
+![Example Pearls](https://studio42gmbh.github.io/jara/images/jara-pearls-2021-01-10-00-40-18.jpg)
+Example Pearls ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/Pearls.java))
+
 ![Materialdemo](https://studio42gmbh.github.io/jara/images/jara-roughnessmetalness-2021-01-10-19-02-45.jpg)
 Metalness (Bottom 0.0 - Top 1.0) and Roughness (Left 0.0 - Right 1.0) ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/RoughnessMetalness.java))
-
-
