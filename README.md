@@ -64,6 +64,9 @@ Example showing different materials ([see source here](https://github.com/studio
 ![Example Chair](https://github.com/studio42gmbh/jara/blob/main/docs/images/jara-chairstill-2022-06-01-11-57-57-1280.png)
 Chair loaded as OBJ exported from Blender ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/ChairStill.java))
 
+![Heros Substance](https://github.com/studio42gmbh/jara/blob/main/docs/images/jara-herosubstance-2022-05-08-15-26-24-1280.png)
+User contributribution from Ondrej Wolf (Thx! :))
+
 ![Example Pearls](https://studio42gmbh.github.io/jara/images/jara-pearls-2021-01-10-00-40-18.jpg)
 Example Pearls ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/Pearls.java))
 
