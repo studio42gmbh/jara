@@ -48,7 +48,7 @@ public class CarStill implements SceneLoader
 		Scene scene = new Scene("Car Still");
 
 		Texture background = assets.loadBackground(
-			AssetManager.Backgrounds.Sunset,
+			AssetManager.Backgrounds.SkyCloudy,
 			0.9, //rampUpBrightness
 			5.0, //rampUpExponent
 			4.0 //rampUpScale

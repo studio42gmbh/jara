@@ -79,7 +79,7 @@ public final class CarShelby
 			0.2,
 			Material.IOR_STEEL
 		);
-		Carroserie.clearCoatRoughness = 0.1;
+		Carroserie.clearCoatRoughness = 0.01;
 		Carroserie.clearCoat = 0.5;
 		assets.setMaterial("Carroserie", Carroserie);
 

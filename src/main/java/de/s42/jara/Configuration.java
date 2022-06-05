@@ -45,8 +45,8 @@ public final class Configuration
 
 	// UI
 	// Highest tested resolution was 8K  (1920 * 4 x 1200 * 4)
-	private final static int DEFAULT_WIDTH = 1920 * 2;
-	private final static int DEFAULT_HEIGHT = 1200 * 2;
+	private final static int DEFAULT_WIDTH = 1920;
+	private final static int DEFAULT_HEIGHT = 1200;
 	private final static int PREFERRED_TILESIZE = 15;
 
 	// Save to file
@@ -56,8 +56,8 @@ public final class Configuration
 
 	// Raytracer
 	private final static int MAX_PASSES = Integer.MAX_VALUE;
-	private final static int THREADS = 8;
-	private final static int RAY_DEPTH = 6;
+	private final static int THREADS = 4;
+	private final static int RAY_DEPTH = 4;
 	private final static int[] DIFFUSE_SUBSAMPLES = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 	private final static int[] SPECULAR_SUBSAMPLES = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 	private final static int[] REFRACTION_SUBSAMPLES = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
