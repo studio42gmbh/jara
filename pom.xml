@@ -15,24 +15,17 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.14.1</version>
-		</dependency>		
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 			<version>2.14.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>7.4.0</version>
-			<scope>test</scope>
+			<scope>compile</scope>
+			<type>jar</type>
 		</dependency>
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>antlr4-runtime</artifactId>
 			<version>4.9.2</version>
+			<scope>compile</scope>
+			<type>jar</type>
 		</dependency>
 	</dependencies>	
 	<build>
@@ -55,7 +48,7 @@
 				<version>3.8.1</version>
 				<configuration>
 					<showDeprecation>true</showDeprecation>
-				 <debug>false</debug>
+					<debug>false</debug>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -108,6 +101,12 @@
 					<destDir>javadoc</destDir>
 					<show>private</show>
 				</configuration>				
+			</plugin>
+			<plugin>
+				<!-- https://maven.apache.org/plugins/maven-install-plugin/ -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>3.0.0-M1</version>
 			</plugin>
 		</plugins>		
 	</build>	
