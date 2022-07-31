@@ -64,6 +64,9 @@ Example showing different materials ([see source here](https://github.com/studio
 ![Example Chair](https://github.com/studio42gmbh/jara/blob/main/docs/images/jara-chairstill-2022-06-01-11-57-57-1280.png)
 Chair loaded as OBJ exported from Blender ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/ChairStill.java))
 
+![Example Transparent](https://github.com/studio42gmbh/jara/blob/main/docs/images/jara-transparent-2022-07-31-11-18-23-2k.png)
+Example showing transparency ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/Transparent.java))
+
 ![Heros Substance](https://github.com/studio42gmbh/jara/blob/main/docs/images/jara-herosubstance-2022-05-08-15-26-24-1280.png)
 User contribution from Ondrej Wolf (Thx! :))
 
