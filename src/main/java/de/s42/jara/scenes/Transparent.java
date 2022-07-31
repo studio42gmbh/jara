@@ -42,7 +42,7 @@ import de.s42.jara.materials.Texture;
  */
 public class Transparent implements SceneLoader
 {
-	private final static AssetManager.Materials FLOOR_MATERIAL = AssetManager.Materials.TerazzoBrickWork;
+	private final static AssetManager.Materials FLOOR_MATERIAL = AssetManager.Materials.IronScratched;
 
 	@Override
 	public Scene loadScene(AssetManager assets)
@@ -52,13 +52,15 @@ public class Transparent implements SceneLoader
 		Scene scene = new Scene("Transparent");
 
 		Texture background = assets.loadBackground(
-			AssetManager.Backgrounds.Path,
+			AssetManager.Backgrounds.Sunset,
 			0.8, //rampUpBrightness
 			5.0, //rampUpExponent
-			0.2 //rampUpScale
+			2.0 //rampUpScale
 		);
+		scene.setBackgroundTextureSmoothing(200.0);
+		scene.setBackgroundTextureSmoothingRender(200.0);		
 		scene.setBackgroundTexture(background);
-
+/*
 		DirectionalLight light = new DirectionalLight(
 			new Vector3(-5.0, 1.0, 1.0),
 			new Color(1.5, 1.0, 0.7, 1.0),
@@ -69,10 +71,10 @@ public class Transparent implements SceneLoader
 			8.0 //attenuationExponent			
 		);
 		scene.setDirectionalLight(light);
-
+*/
 		Camera camera = new Camera(
 			new Vector3(1.0, 1.5, 2.0),
-			new Vector3(0.0, -0.15, 0.0),
+			new Vector3(0.0, -0.0, 0.0),
 			Vector3.UP,
 			Math.toRadians(90),
 			(double) Configuration.getWidth() / (double) Configuration.getHeight()
@@ -81,24 +83,72 @@ public class Transparent implements SceneLoader
 
 		Material sphereMaterial = new Material(
 			Color.Black,
-			new Color(1.0, 1.0, 1.0),
-			1.0,
-			0.0,
+			new Color(0.0, 0.0, 0.1, 1.0),
+			0.5,
+			0.1,
 			Material.IOR_GLASS
 		);
-		sphereMaterial.transparency = 1.0;
+		sphereMaterial.transparency = 0.9;
 
+		Material sphereShinyMaterial = new Material(
+			Color.Black,
+			
+			new Color(30.0 / 255.0, 135.0 / 255.0, 188.0 / 255.0, 1.0),
+			0.0,
+			0.0,
+			Material.IOR_PLASTIC
+		);
+
+		Material sphereShiny2Material = new Material(
+			Color.Black,
+			
+			new Color(232.0 / 255.0, 174.0 / 255.0, 0.0 / 255.0, 1.0),
+			0.0,
+			0.0,
+			Material.IOR_PLASTIC
+		);
+
+		
 		Sphere sphere1 = new Sphere(
-			new Vector3(0.0, 0.0, 0.0),
+			new Vector3(-0.2, 0.0, 0.0),
 			sphereMaterial,
-			0.7
+			0.8
 		);
 		scene.add(sphere1);
 
+		Sphere sphere2 = new Sphere(
+			new Vector3(1.3, -0.5, -0.5),
+			sphereMaterial,
+			0.3
+		);
+		scene.add(sphere2);
+
+		Sphere sphere3 = new Sphere(
+			new Vector3(-4.2, -0.4, -2.0),
+			sphereMaterial,
+			0.4
+		);
+		scene.add(sphere3);
+
+		Sphere sphere4 = new Sphere(
+			new Vector3(1.0, -0.5, -4.0),
+			sphereShinyMaterial,
+			0.3
+		);
+		scene.add(sphere4);
+
+		Sphere sphere5 = new Sphere(
+			new Vector3(-1.1, -0.7, 0.8),
+			sphereShiny2Material,
+			0.1
+		);
+		scene.add(sphere5);
+
+		
 		Material floorMaterial = assets.loadPbrMaterial(FLOOR_MATERIAL, new Vector3(0.25));
 		
 		Plane plane = new Plane(
-			new Vector3(0.0, -0.70, 0.0),
+			new Vector3(0.0, -0.8, 0.0),
 			floorMaterial,
 			new Vector3(0.0, 1.0, 0.0)
 		);

@@ -62,7 +62,7 @@ public class CarStill implements SceneLoader
 
 		Camera camera = new Camera(
 			new Vector3(-30.0, 14.0, 23.0),
-			new Vector3(-1.5, 4.5, 0.0),
+			new Vector3(-1.5, 3.0, 0.0),
 			Vector3.UP,
 			Math.toRadians(60),
 			(double) Configuration.getWidth() / (double) Configuration.getHeight()

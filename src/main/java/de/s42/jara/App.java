@@ -172,7 +172,7 @@ public class App extends JFrame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBackground(Color.darkGray);
 		setContentPane(new DrawPanel());
-		getContentPane().setPreferredSize(new Dimension(Configuration.getWidth(), Configuration.getHeight() + 15));
+		getContentPane().setPreferredSize(new Dimension((int)(Configuration.getWidth() * Configuration.getWindowScale()), (int)(Configuration.getHeight() * Configuration.getWindowScale()) + 15));
 		pack();
 		setLocationRelativeTo(null);
 
@@ -233,11 +233,11 @@ public class App extends JFrame
 	{
 		try {
 			//create a complete screenshot with menuoptions etc.
-			int w = getContentPane().getPreferredSize().width;
+			int w =  raytracer.buffer.getWidth();
 			int h;
 
 			if (Configuration.getShowFooterInFiles()) {
-				h = getContentPane().getPreferredSize().height;
+				h = raytracer.buffer.getHeight() + 15;
 			}
 			//@improvement assumes the image to be drawn top in frame component
 			else {
