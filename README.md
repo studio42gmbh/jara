@@ -70,7 +70,7 @@ Example showing transparency ([see source here](https://github.com/studio42gmbh/
 ![Heros Substance](https://github.com/studio42gmbh/jara/blob/main/docs/images/jara-herosubstance-2022-05-08-15-26-24-1280.png)
 User contribution from Ondrej Wolf (Thx! :))
 
-![Example Pearls](https://studio42gmbh.github.io/jara/images/jara-pearls-2021-01-10-00-40-18.jpg)
+![Example Pearls](https://github.com/studio42gmbh/jara/blob/main/docs/images/jara-pearls-2022-12-04-11-38-55-1280.jpg)
 Example Pearls ([see source here](https://github.com/studio42gmbh/jara/blob/main/src/main/java/de/s42/jara/scenes/Pearls.java))
 
 ![Materialdemo](https://studio42gmbh.github.io/jara/images/jara-roughnessmetalness-2021-01-10-19-02-45.jpg)
